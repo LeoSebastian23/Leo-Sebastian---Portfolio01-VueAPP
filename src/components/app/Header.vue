@@ -12,7 +12,7 @@ const isMenuOpen = ref(false);
 </style>
 <template>
   <header
-    class="flex w-full py-4 top-0 z-10 fixed backdrop-filter backdrop-blur-md items-center -sm:h-24" style="background-color: rgb(254, 243, 199, 0.1);"
+    class="flex w-full py-4 top-0 z-10 fixed backdrop-filter backdrop-blur-md items-center -sm:h-24 -sm:justify-center max-sm:items-center" style="background-color: rgb(254, 243, 199, 0.1);"
   >
     <Layout class="w-full grid grid-cols-3 items-center justify-between">
       <div class="flex col-span-1 items-center">
@@ -28,7 +28,7 @@ const isMenuOpen = ref(false);
         <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">{{ _header.link_3 }}</a>
         <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">{{ _header.link_4 }}</a>
       </nav>
-      <div class="col-span-3 hidden items-center justify-end -sm:flex">
+      <div class="col-span-2 hidden items-center justify-end -sm:flex">
         <button
           aria-label="open-menu"
           class="p-1"

@@ -1,0 +1,16 @@
+.about{
+    height: 70%;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    background-color:rgb(254, 243, 199, 0.1);
+    overflow: hidden;
+}
+.experience{
+    height: 40%;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    background-color:rgb(254, 243, 199, 0.1);
+    overflow: hidden;
+}

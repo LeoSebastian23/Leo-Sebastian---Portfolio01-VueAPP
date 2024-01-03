@@ -1,6 +1,11 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap'); /*Alata */
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap'); /*Roboto Slab*/
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Rethink+Sans:ital,wght@1,500;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 *,
 *::before,

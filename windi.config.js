@@ -1,9 +1,10 @@
 import { defineConfig } from "vite-plugin-windicss";
 import filters from "windicss/plugin/filters";
+import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
   preflight: false,
-  plugins: [filters],
+  plugins: [filters,tailwindcss],
   shortcuts: {
     "experience-container": "flex flex-col mt-3 ",
     "experience-company": "font-medium text-xl text-gray-900 inline-block",

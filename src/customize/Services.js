@@ -17,7 +17,7 @@ const _services = {
       title: "APP DEVELOPMENT",
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit beatae sunt dolores, accusamus nobis minus quasi sit hic unde quiullam eaque fuga ex ipsam dignissimos rem quae! Illum, delectus.",
-      img: "/services/1.webp",
+      // img: "/services/1.webp",
     },
   ],
 };

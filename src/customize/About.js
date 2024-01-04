@@ -22,8 +22,9 @@ const _about = {
     { name: "VueJS", icon: "/icons/vuejs.png" },
     { name: "NodeJS", icon: "/icons/nodejs.png" },
     { name: "TypeScript", icon: "/icons/typescript.png" },
+    { name: "MySQL", icon: "/icons/MYSQL.png" },
+    { name: "Git", icon: "/icons/git.png" },
   ],
-  tools: ["VSCode", "Hyper", "Notion", "Figma", "GIT"],
 };
 
 export default _about;

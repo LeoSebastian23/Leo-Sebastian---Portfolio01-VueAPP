@@ -15,7 +15,7 @@ const getIcon = (skillName) => {
 </style>
 <template>
   <Layout id="about" class="py-30 -sm:py-0">
-    <div class=" flex justify-center items-center">
+    <div class="flex justify-center items-center">
       <i class="bi bi-person-fill custom-size"></i>
       <h1 class="text-center title text-zinc-200">{{ __about.title }}</h1>
     </div>
@@ -34,7 +34,9 @@ const getIcon = (skillName) => {
 
         <div class="flex flex-col xxl:w-1/2 lg:w-1/2">
           <div class="about">
-            <h1 class="subtitle text-zinc-200">💻{{ __about.subtitle_about }}</h1>
+            <h1 class="subtitle text-zinc-200">
+              💻{{ __about.subtitle_about }}
+            </h1>
             <p class="mt-3 description text-zinc-200">
               {{ __about.description_about }}
             </p>
@@ -45,40 +47,38 @@ const getIcon = (skillName) => {
               {{ __about.description03_about }}
             </p>
           </div>
-          <div class="experience">
-            <h1 class="subtitle text-zinc-200">💼 Experiencia</h1>
-            <template
-              v-for="(experience, index) in __about.experiences"
-              :key="index"
-            >
-              <div class="experience-container text-zinc-200">
-                <span class="experience-company text-zinc-200">{{
-                  experience.company
-                }}</span>
-                <span class="experience-rol text-zinc-200">{{
-                  experience.rol
-                }}</span>
-                <span class="experience-date text-zinc-200">{{
-                  experience.date
-                }}</span>
-              </div>
-            </template>
-          </div>
         </div>
       </div>
 
       <!-- Experiencia -->
+      <div class="experience">
+        <h1 class="subtitle text-zinc-200">💼 Experiencia</h1>
+        <template
+          v-for="(experience, index) in __about.experiences"
+          :key="index"
+        >
+          <div class="experience-container text-zinc-200">
+            <span class="experience-company text-zinc-200">{{
+              experience.company
+            }}</span>
+            <span class="experience-rol text-zinc-200">{{
+              experience.rol
+            }}</span>
+            <span class="experience-date text-zinc-200">{{
+              experience.date
+            }}</span>
+          </div>
+        </template>
+      </div>
 
       <!-- Skills e Tools -->
-      <div class="mt-20 flex flex-col sm:flex-row gap-8">
-        <!-- Skills -->
-        <div class="flex flex-col bg-slate-200">
-          <h1 class="subtitle-inner text-zinc-800 text-center">Skills</h1>
-          <div class="flex flex-wrap justify-center">
-            <template v-for="(skill, index) in __about.skills" :key="index">
-              <div
-                class="bg-slate-800 m-5 p-5 w-auto rounded-lg shadow-md flex flex-col justify-items-center items-center"
-              >
+      <!-- Skills -->
+      <div class="containerSkills">
+        <h1 class="text-zinc-200 text-center">Skills</h1>
+        <div class="flex flex-wrap justify-center">
+          <template v-for="(skill, index) in __about.skills" :key="index">
+            <div class="cardSkill m-5">
+              <div class="cardSkill2 ">
                 <img
                   :src="getIcon(skill.name)"
                   alt="icon"
@@ -86,8 +86,13 @@ const getIcon = (skillName) => {
                 />
                 <span>{{ skill.name }}</span>
               </div>
-            </template>
-          </div>
+            </div>
+            <!-- <div
+                class="bg-slate-800 m-5 p-5 w-auto rounded-lg shadow-md flex flex-col justify-items-center items-center"
+              >
+                
+              </div> -->
+          </template>
         </div>
       </div>
     </div>

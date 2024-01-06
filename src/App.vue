@@ -8,7 +8,7 @@ import Footer from "./components/app/Footer.vue";
 
 //Sections by order
 import Welcome from "./components/sections/Welcome.vue";
-import Gallery from "./components/sections/Gallery.vue";
+
 import Services from "./components/sections/Services.vue";
 import About from "./components/sections/About.vue";
 import Contact from "./components/sections/Contact.vue";
@@ -32,7 +32,6 @@ useHead({
   <main>
     <Welcome />
     <About />
-    <Gallery />
     <Services />
     <Contact />
   </main>

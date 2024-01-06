@@ -72,7 +72,7 @@ useHead({
         </div>
         <button class="BtmProyects" data-text="Awesome">
           <a
-            :href="`#${_header.link_1}`"
+            :href="`#${_header.link_2}`"
             class="no-underline"
           >
             <span class="actual-text">&nbsp;Proyectos&nbsp;</span>

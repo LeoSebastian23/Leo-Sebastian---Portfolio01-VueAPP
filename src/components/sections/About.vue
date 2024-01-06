@@ -17,7 +17,7 @@ const getIcon = (skillName) => {
   <Layout id="about" class="py-30 -sm:py-0">
     <div class="flex justify-center items-center">
       <i class="bi bi-person-fill custom-size"></i>
-      <h1 class="text-center title text-zinc-200">{{ __about.title }}</h1>
+      <h1 class="text-center title text-zinc-200 not-italic">{{ __about.title }}</h1>
     </div>
     <div
       class="mt-20 card-services-container -sm:mt-10 -sm:gap-0 -md:items-start flex flex-col"
@@ -34,7 +34,7 @@ const getIcon = (skillName) => {
 
         <div class="flex flex-col xxl:w-1/2 lg:w-1/2">
           <div class="about">
-            <h1 class="subtitle text-zinc-200">
+            <h1 class="subtitle text-zinc-200 not-italic">
               💻{{ __about.subtitle_about }}
             </h1>
             <p class="mt-3 description text-zinc-200">
@@ -52,7 +52,7 @@ const getIcon = (skillName) => {
 
       <!-- Experiencia -->
       <div class="experience">
-        <h1 class="subtitle text-zinc-200">💼 Experiencia</h1>
+        <h1 class="subtitle text-zinc-200 not-italic">💼 Experiencia</h1>
         <template
           v-for="(experience, index) in __about.experiences"
           :key="index"
@@ -74,7 +74,7 @@ const getIcon = (skillName) => {
       <!-- Skills e Tools -->
       <!-- Skills -->
       <div class="containerSkills">
-        <h1 class="text-zinc-200 text-center">Skills</h1>
+        <h1 class="subtitle text-zinc-200 text-center m-5 not-italic">⭐Skills</h1>
         <div class="flex flex-wrap justify-center">
           <template v-for="(skill, index) in __about.skills" :key="index">
             <div class="cardSkill m-5">

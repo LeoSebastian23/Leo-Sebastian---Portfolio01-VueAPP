@@ -6,6 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./assets/main.css";
 import "./assets/welcome.css"
 import "./assets/about.css"
+import "./assets/contact.css"
 import Particles from 'vue3-particles';
 
 

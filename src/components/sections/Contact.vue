@@ -1,40 +1,52 @@
 <script setup>
 import Layout from "../app/Layout.vue";
-import _contact from "../../customize/Contact";
+import emailjs from 'emailjs-com';
+
+const enviarFormulario = async () => {
+  try {
+    const templateParams = {
+      from_name: 'Nombre del remitente',
+      to_name: 'Tu nombre',
+      message_html: 'Contenido del mensaje'
+    };
+
+    // Reemplaza 'tu_service_id', 'tu_template_id' y 'tu_user_id' con tus propias credenciales de Email.js
+    const response = await emailjs.send('tu_service_id', 'tu_template_id', templateParams, 'tu_user_id');
+
+    console.log('Correo enviado con éxito:', response);
+  } catch (error) {
+    console.error('Error al enviar el correo:', error);
+  }
+};
 </script>
 <style>
-.custom-color {
-  color: #d8e9a8;
+.custom-size {
+  font-size: 48px; /* Tamaño personalizado */
+  margin-right: 10px;
 }
 </style>
 <template>
   <Layout id="contact" class="h-200">
-    <div
-      class="flex flex-col h-full w-full justify-center items-center -sm:mt-10"
-    >
-      <h1
-        class="text-left text-6xl w-1/2 title -sm:text-4xl -md:w-full custom-color"
-      >
-        {{ _contact.title }}
-      </h1>
-      <a
-        class="text-center button-primary"
-        :href="`mailto:${_contact.email}`"
-        >{{ _contact.button_text }}</a
-      >
-    </div>
-    <div class="login-box">
+    <div class="login-box mt-2">
+      <div class="flex justify-center items-center mb-10">
+        <i class="bi bi-envelope custom-size"></i>
+        <h1 class="text-center title text-zinc-200 not-italic">Hablemos!</h1>
+      </div>
       <form>
         <div class="user-box">
           <input type="text" name="" required="" />
-          <label>Username</label>
+          <label>Nombre</label>
         </div>
         <div class="user-box">
-          <input type="password" name="" required="" />
-          <label>Password</label>
+          <input type="text" name="" required="" />
+          <label>Correo electronico</label>
+        </div>
+        <div class="user-box">
+          <textarea name="mensaje" required></textarea>
+          <label>Mensaje</label>
         </div>
         <center>
-          <a href="#">
+          <a href="#" @click="enviarFormulario">
             SEND
             <span></span>
           </a>

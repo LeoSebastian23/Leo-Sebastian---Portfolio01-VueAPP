@@ -1,5 +1,5 @@
 {
-  "name": "white-space-template",
+  "name": "leo-sebastian-portfolio",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
@@ -9,10 +9,13 @@
   "dependencies": {
     "@vueuse/head": "^0.7.5",
     "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.1",
+    "emailjs-com": "^3.2.0",
     "tailwind-typewriter": "^1.0.1",
     "three": "^0.159.0",
     "ts": "^0.0.0",
     "tsparticles-slim": "^2.12.0",
+    "tw-elements": "^1.1.0",
     "vue": "^3.4.4",
     "vue3-particles": "^2.12.0"
   },

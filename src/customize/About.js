@@ -24,6 +24,54 @@ const _about = {
     { name: "TypeScript", icon: "/icons/typescript.png" },
     { name: "MySQL", icon: "/icons/MYSQL.png" },
     { name: "Git", icon: "/icons/git.png" },
+    { name: "Postman", icon: "/icons/postman.png" },
+  ],
+  education:[
+    {
+      name: "Análisis, Programación y Desarrollo de Aplicaciones",
+      institute: "Instituto Superior de Formación Técnica N° 194",
+      date: "2021 - Actualidad",
+      link: "https://www.isft194.edu.ar/"
+    },
+  ],
+  certificados:[
+    {
+      name: "Full Stack Javascript",
+      place: "Dev Place / ATICMA",
+      date: "2022/2023",
+      link:"https://www.linkedin.com/company/constana/",
+    },
+    {
+      name: "Introduccion a Bases de datos y SQL.",
+      place: "EducacionIT",
+      date: "2023",
+      link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/62083",
+    },
+    {
+      name: "Software Tester QA.",
+      place: "EducacionIT",
+      date: "2022",
+      link:"https://www.educacionit.com/perfil/Leonardo-Gauto-696277/certificado/59187",
+    },
+    {
+      name: "Javascript desde cero.",
+      place: "EducacionIT",
+      date: "2022",
+      link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/59524",
+    },
+    {
+      name: "Aprende SCRUM.",
+      place: "LinkedIn",
+      date: "2023",
+      link:"https://www.linkedin.com/learning/certificates/a874dee275331ae1c05c42b97d5c13b5128ab1bb9db2179824b1e6a1ab6fd72b",
+    },
+    {
+      name: "GitHub para programadores.",
+      place: "LinkedIn",
+      date: "2023",
+      link:"https://www.linkedin.com/learning/certificates/2b40480d2603aa09dc5f8aff3da5a46890036644465f2cad8e5d6886b0324abe",
+    },
+    
   ],
 };
 

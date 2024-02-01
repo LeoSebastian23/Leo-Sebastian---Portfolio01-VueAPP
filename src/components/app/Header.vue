@@ -23,9 +23,9 @@ const isMenuOpen = ref(false);
         />
       </div>
       <nav class="flex col-span-2 items-center justify-end -sm:hidden ">
-        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">{{ _header.link_2 }}</a>
-        <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">{{ _header.link_3 }}</a>
-        <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">{{ _header.link_4 }}</a>
+        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Proyectos</a>
+        <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Sobre Mi</a>
+        <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Contacto</a>
       </nav>
       <div class="col-span-2 hidden items-center justify-end -sm:flex">
         <button

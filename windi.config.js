@@ -6,7 +6,7 @@ export default defineConfig({
   preflight: false,
   plugins: [filters,tailwindcss],
   shortcuts: {
-    "experience-container": "flex flex-col mt-3 ",
+    "experience-container": "flex flex-col ",
     "experience-company": "font-medium text-xl  inline-block",
     "experience-rol": "font-medium text-lg text-gray-700 inline-block",
     "experience-date": "font-medium text-base text-gray-500 inline-block",

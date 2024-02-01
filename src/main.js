@@ -7,6 +7,7 @@ import "./assets/main.css";
 import "./assets/welcome.css"
 import "./assets/about.css"
 import "./assets/contact.css"
+import "./assets/services.css"
 import Particles from 'vue3-particles';
 
 

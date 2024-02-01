@@ -1,34 +1,51 @@
 <script setup>
+import _header from "../../customize/Header";
 const emit = defineEmits(["close"]);
 </script>
 
 <template>
   <div
-    class="flex h-screen bg-gray-50 w-full top-0 left-0 z-30 fixed items-center justify-center"
+    class="flex h-screen bg-neutral-800 w-full top-0 left-0 z-30 fixed items-center justify-center"
   >
     <button
-      aria-label="close-menu"
-      class="top-10 right-10 absolute"
+      class=" top-10 right-10 absolute group cursor-pointer outline-none hover:rotate-90 duration-300"
       @click="$emit('close')"
     >
       <svg
-        class="h-10 w-10"
-        fill="currentColor"
-        viewBox="0 0 20 20"
+        class="stroke-teal-500 fill-none group-hover:fill-teal-800 group-active:stroke-teal-200 group-active:fill-teal-600 group-active:duration-0 duration-300"
+        viewBox="0 0 24 24"
+        height="50px"
+        width="50px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"
+          stroke-width="1.5"
+          d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
         ></path>
+        <path stroke-width="1.5" d="M8 12H16"></path>
+        <path stroke-width="1.5" d="M12 16V8"></path>
       </svg>
     </button>
+    
     <nav class="flex flex-col">
-      <a href="#gallery" class="m-0 mt-6 text-5xl link">Gallery</a>
-      <a href="#services" class="m-0 mt-6 text-5xl link">Services</a>
-      <a href="#about" class="m-0 mt-6 text-5xl link">About</a>
-      <a href="#contact" class="m-0 mt-6 text-5xl link">Contact</a>
+      <a
+      :href="`#${_header.link_2}`"
+        class="m-0 text-slate-200 mt-6 text-4xl hover:text-slate-400 hover:no-underline link"
+        @click="$emit('close')"
+        >Proyectos</a
+      >
+      <a
+      :href="`#${_header.link_3}`"
+        class="m-0 text-slate-200 mt-6 text-4xl hover:text-slate-400 hover:no-underline link"
+        @click="$emit('close')"
+        >Sobre Mi</a
+      >
+      <a
+      :href="`#${_header.link_4}`"
+        class="m-0 text-slate-200 mt-6 text-4xl hover:text-slate-400 hover:no-underline link"
+        @click="$emit('close')"
+        >Contacto</a
+      >
     </nav>
   </div>
 </template>

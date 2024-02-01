@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
+  
   theme: {
     extend: {
       keyframes: {
@@ -30,6 +31,7 @@ module.exports = {
   plugins: [
     require('tailwind-typewriter')
   ],
+  safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
   
 }
 

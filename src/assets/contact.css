@@ -2,7 +2,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 50%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(24, 20, 20, 0.987);
@@ -13,6 +13,7 @@
   
   .login-box .user-box {
     position: relative;
+    margin-top: 20px;
   }
   
   .login-box .user-box input {
@@ -51,7 +52,7 @@
     display: inline-block;
     padding: 10px 20px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 22px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
@@ -75,6 +76,27 @@
     display: block;
   }
   
+  .login-box .user-box textarea {
+    width: 100%;
+    /* padding: 10px 0; */
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    
+  }
+  
+  .login-box .user-box textarea:focus ~ label,
+  .login-box .user-box textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+  }
+
   @keyframes btn-anim1 {
     0% {
       left: -100%;

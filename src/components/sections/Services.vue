@@ -19,7 +19,7 @@ import _services from "../../customize/Services";
   <Layout id="services" class="py-20 -sm:py-10">
     <div class="flex justify-center items-center mt-3">
       <i class="bi bi-folder custom-size"></i>
-      <h1 class="title not-italic ">{{ _services.title }}</h1>
+      <h1 class="title not-italic">{{ _services.title }}</h1>
     </div>
     <template v-for="(service, index) in _services.services" :key="index">
       <div
@@ -36,11 +36,18 @@ import _services from "../../customize/Services";
                 <p class="mb-12">
                   {{ service.description }}
                 </p>
+                <div class="btnContainerLinks ">
+                      <button class="btnLinks"><i class="bi bi-github"></i></button>
+                      <button class="btnLinks"><i class="bi bi-linkedin"></i></button>
+                      <button class="btnLinks"><i class="bi bi-globe"></i></button>
+                </div>
                 <p
-                  class="mt-auto mb-0 font-normal leading-normal text-md  group text-slate-100"
+                  class="mt-auto mb-0 font-normal leading-normal text-md group text-slate-100"
                 >
                   <span v-for="(tool, index) in service.tools" :key="index">
-                    <span class="bg-slate-600 px-2 rounded-full">{{ tool }}</span>
+                    <span class="bg-slate-600 px-2 rounded-full">{{
+                      tool
+                    }}</span>
                     <span v-if="index < service.tools.length - 1"> | </span>
                   </span>
                 </p>
@@ -50,14 +57,16 @@ import _services from "../../customize/Services";
               class="max-w-full px-3 mt-12 ml-auto text-center lg:mt-0 lg:w-5/12 lg:flex-none"
             >
               <div
-                class="h-full bg-gradient-to-tl from-green-500 to-emerald-600 rounded-xl"
+                class="h-full rounded-xl "
               >
                 <div class="relative flex items-center justify-center h-full">
-                  <img
-                    class="imgProyects"
-                    :src="service.img"
-                    alt="services-image"
-                  />
+                  <a href="https://github.com/LeoSebastian23" target="_blank">
+                    <img
+                      class="imgProyects"
+                      :src="service.img"
+                      alt="services-image"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

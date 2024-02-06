@@ -5,7 +5,7 @@ const _about = {
     "Hola! 🙋‍♂️. Soy un apasionado desarrollador con sólidas habilidades en React y React Native, especializado en la creación de soluciones eficientes y atractivas para aplicaciones web y móviles.",
     description02_about:"Mi profundo conocimiento de JavaScript y su ecosistema me permite ofrecer soluciones completas.",
     description03_about:"Ansío contribuir con mi experiencia y aprender nuevas tecnologías en un entorno de desarrollo colaborativo.",
-  img: "/services/img01.jpeg",
+  img: "/services/Me.jpeg",
   experiences: [
     {
       company: "Freelance",

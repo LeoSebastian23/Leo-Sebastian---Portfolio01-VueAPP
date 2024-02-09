@@ -74,7 +74,7 @@ const _services = {
       img: "/services/DevCoin.png",
       tools:[
         "Javascript","MySQL2", "Node.js","Express.js","Joi"," Sequielize","Postman"
-      ]
+      ] 
     },
   ],
 };

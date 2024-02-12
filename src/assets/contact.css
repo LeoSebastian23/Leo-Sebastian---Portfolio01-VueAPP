@@ -10,6 +10,13 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
   }
+
+  @media (max-width: 576px) {
+    .login-box {
+      width: 90%;
+    }
+  
+  }
   
   .login-box .user-box {
     position: relative;
@@ -47,7 +54,7 @@
     font-size: 12px;
   }
   
-  .login-box form a {
+  .login-box form button {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -61,7 +68,7 @@
     letter-spacing: 4px
   }
   
-  .login-box a:hover {
+  .login-box button:hover {
     background: #03f40f;
     color: #fff;
     border-radius: 5px;
@@ -71,14 +78,14 @@
                 0 0 100px #03f40f;
   }
   
-  .login-box a span {
+  .login-box button span {
     position: absolute;
     display: block;
   }
   
   .login-box .user-box textarea {
     width: 100%;
-    /* padding: 10px 0; */
+    padding: 10px 0;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
@@ -107,7 +114,7 @@
     }
   }
   
-  .login-box a span:nth-child(1) {
+  .login-box button span:nth-child(1) {
     bottom: 2px;
     left: -100%;
     width: 100%;

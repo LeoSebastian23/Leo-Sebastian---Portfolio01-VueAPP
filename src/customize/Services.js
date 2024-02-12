@@ -42,9 +42,9 @@ const _services = {
     },
     /*------------------------------------ T-SHIRTS CAHMPIONS / MOBILE ------------------------------------------ */
     {
-      title: "T-Shirts-Football-Champions",
+      title: "Football Jersey Champions",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit beatae sunt dolores, accusamus nobis minus quasi sit hic unde quiullam eaque fuga ex ipsam dignissimos rem quae! Illum, delectus.",
+        "Una aplicación movil centrada en la venta de camisetas de futbol que han levantado importantes trofeos. Ofrece una experiencia de compra completa y fácil de usar. Se desarrollo con React Native, Expo y Firebase",
       img: "/services/t-shirts-champions01.png",
       tools:[
         "React Native", "Expo", "Javascript","Redux","CSS3","Firebase"
@@ -57,24 +57,27 @@ const _services = {
     {
       title: "TaskApp - Mobile Application ",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit beatae sunt dolores, accusamus nobis minus quasi sit hic unde quiullam eaque fuga ex ipsam dignissimos rem quae! Illum, delectus.",
+        "Aplicación personal de gestión de tareas donde recibes notificaciones en tiempo real y eliminacion automatica de tareas caducadas.",
       img: "/services/task-app.png",
       tools:[
         "React Native", "Javascript", "Redux","CSS3","Expo"
       ],
-      linkGH:"",
-      linkLinkedIn:"",
+      linkGH:"https://github.com/LeoSebastian23/mobile-task",
+      linkLinkedIn:"https://www.linkedin.com/posts/leosebastian24_reactnative-expoframework-appupdate-activity-7142506303960113152-fBKg/",
       linkWeb:"",
     },
     /*------------------------------------------- DEVCOIN ------------------------------------------------------ */
     {
       title: "DevCoin",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit beatae sunt dolores, accusamus nobis minus quasi sit hic unde quiullam eaque fuga ex ipsam dignissimos rem quae! Illum, delectus.",
+        "Plataforma web para comprar, transferir y guardar criptomonedas.",
       img: "/services/DevCoin.png",
       tools:[
         "Javascript","MySQL2", "Node.js","Express.js","Joi"," Sequielize","Postman"
-      ] 
+      ],
+      linkGH:"https://github.com/jrobuschi/DEVCOIN/",
+      linkLinkedIn:"https://www.linkedin.com/feed/update/urn:li:activity:7028456728413233152/",
+      linkWeb:"", 
     },
   ],
 };

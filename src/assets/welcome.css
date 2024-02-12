@@ -25,7 +25,6 @@
 
   /* DESCRIPTION */
   .card {
-    /* color used to softly clip top and bottom of the .words container */
     --bg-color: #212121;
     background-color: var(--bg-color);
     margin: 5px;
@@ -66,10 +65,18 @@
     .loader {
       font-size: 20px; 
     }
-  
+    
+    .dev{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .word {
       padding-left: 3px; 
       padding-right: 3px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   

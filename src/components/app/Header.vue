@@ -16,16 +16,19 @@ const isMenuOpen = ref(false);
   >
     <Layout class="w-full grid grid-cols-3 items-center justify-between">
       <div class="flex col-span-1 items-center">
-        <img
-          :src="_header.img_logo_url"
-          class="object-cover rounded"
-          width="60"
-        />
+        <a :href="`#${_header.link_1}`">
+      <img
+        :src="_header.img_logo_url"
+        class="object-cover rounded"
+        width="60"
+        alt="Logo"
+      />
+    </a>
       </div>
       <nav class="flex col-span-2 items-center justify-end -sm:hidden ">
-        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Proyectos</a>
-        <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Sobre Mi</a>
-        <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-slate-600 font-mono">Contacto</a>
+        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Proyectos</a>
+        <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Sobre Mi</a>
+        <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Contacto</a>
       </nav>
       <div class="col-span-2 hidden items-center justify-end -sm:flex">
         <button

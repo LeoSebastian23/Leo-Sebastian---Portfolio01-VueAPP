@@ -16,12 +16,6 @@
     overflow: hidden;
 }
 
-/* .containerSkills{
-    background-color:rgb(254, 243, 199, 0.1);
-    display: flex;
-    flex-direction: column;
-    border-radius: 2rem;
-} */
 
 .cardSkill {
     width: 125px;

@@ -49,7 +49,7 @@
                                 size: 40
                             },
                             push: {
-                                quantity: 8
+                                quantity: 3
                             },
                             repulse: {
                                 distance: 100,
@@ -81,7 +81,7 @@
                                 enable: true,
                                 area: 400
                             },
-                            value: 60
+                            value: 20
                         },
                         opacity: {
                             value: 0.2

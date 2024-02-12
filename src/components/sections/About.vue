@@ -35,9 +35,11 @@ const getIcon = (skillName) => {
           />
         </div>
 
-        <div class="flex flex-col xxl:w-1/2 lg:w-1/2">
-          <div class="about">
-            <h1 class="subtitle text-zinc-200 not-italic">
+        <div class="flex flex-col xxl:w-1/2 lg:w-1/2 -sm:items-center">
+          <div class="about -sm:w-full">
+            <h1
+              class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl"
+            >
               💻{{ __about.subtitle_about }}
             </h1>
             <p class="mt-3 description text-zinc-200">
@@ -53,35 +55,46 @@ const getIcon = (skillName) => {
         </div>
       </div>
 
-      <div class="experience flex flex-col justify-center">
-        <div class="flex flex-col items-center justify-center">
-          <h1 class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center">
-            🎓Educación
-          </h1>
-          <template
-            v-for="(education, index) in __about.education"
-            :key="index"
-          >
-            <div class="experience-container text-zinc-200">
-              <span class="experience-company text-zinc-200">{{
-                education.name
-              }}</span>
-              <span class="experience-rol text-zinc-200">{{
-                education.institute
-              }}</span>
-              <span class="experience-date text-zinc-200">{{
-                education.date
-              }}</span>
-              <a class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline" :href="education.link" target="_blank">
-                Ver</a
-              >
-            </div>
-          </template>
+      <div class="flex flex-col -sm:items-center">
+        <div class="experience flex flex-col justify-center -sm:w-full">
+          <div class="flex flex-col items-center justify-center">
+            <h1
+              class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl -sm:mb-2"
+            >
+              🎓Educación
+            </h1>
+            <template
+              v-for="(education, index) in __about.education"
+              :key="index"
+            >
+              <div class="experience-container text-zinc-200">
+                <span class="experience-company text-zinc-200">{{
+                  education.name
+                }}</span>
+                <span class="experience-rol text-zinc-200">{{
+                  education.institute
+                }}</span>
+                <span class="experience-date text-zinc-200">{{
+                  education.date
+                }}</span>
+                <a
+                  class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline"
+                  :href="education.link"
+                  target="_blank"
+                >
+                  Ver</a
+                >
+              </div>
+            </template>
+          </div>
         </div>
       </div>
 
-      <div class="experience flex flex-col justify-center" >
-          <h1 class="subtitle text-4xl text-zinc-200 mb-5 not-italic flex justify-center -sm:text-center ">
+      <div class="flex flex-col -sm:items-center">
+        <div class="experience flex flex-col justify-center -sm:w-full">
+          <h1
+            class="subtitle text-4xl text-zinc-200 mb-5 not-italic flex justify-center -sm:text-center -sm:text-3xl"
+          >
             📜Cursos y Certificados
           </h1>
           <div
@@ -108,23 +121,31 @@ const getIcon = (skillName) => {
             </template>
           </div>
         </div>
-      <!-- Skills e Tools -->
-      <!-- Skills -->
-      <div class="experience flex flex-col justify-center">
-        <h1 class="subtitle text-4xl text-zinc-200 text-center mb-5 not-italic">
-          ✔️Tecnologías
-        </h1>
-        <div
-          class="grid gap-4 -sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6"
-        >
-          <template v-for="(skill, index) in __about.skills" :key="index">
-            <div class="cardSkill m-5">
-              <div class="cardSkill2">
-                <img :src="getIcon(skill.name)" alt="icon" class="icon w-25" />
-                <span>{{ skill.name }}</span>
+      </div>
+
+      <div class="flex flex-col -sm:items-center">
+        <div class="experience flex flex-col justify-center -sm:w-full">
+          <h1
+            class="subtitle text-4xl text-zinc-200 text-center mb-5 not-italic"
+          >
+            ✔️Tecnologías
+          </h1>
+          <div
+            class="grid gap-4 justify-center items-center -sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 "
+          >
+            <template v-for="(skill, index) in __about.skills" :key="index">
+              <div class="cardSkill m-5">
+                <div class="cardSkill2">
+                  <img
+                    :src="getIcon(skill.name)"
+                    alt="icon"
+                    class="icon w-25"
+                  />
+                  <span>{{ skill.name }}</span>
+                </div>
               </div>
-            </div>
-          </template>
+            </template>
+          </div>
         </div>
       </div>
     </div>

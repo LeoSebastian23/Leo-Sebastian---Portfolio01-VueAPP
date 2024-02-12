@@ -28,7 +28,7 @@ useHead({
         </h1>
         <div class="card">
           <div class="loader">
-            <p>Developer</p>
+            <p class="dev">Developer</p>
             <div class="words">
               <span class="word">Web / Mobile</span>
             </div>

@@ -1,6 +1,6 @@
 <template>
   <Layout id="contact" class="h-200">
-    <div class="login-box mt-2 ">
+    <div class="login-box">
       <div class="flex justify-center items-center mb-10">
         <i class="bi bi-envelope custom-size"></i>
         <h1 class="text-center title text-zinc-200 not-italic">¡Hablemos!</h1>
@@ -19,7 +19,10 @@
           <label>Mensaje</label>
         </div>
         <center>
-          <button type="submit">Enviar</button>
+          <button type="submit">Enviar
+            <span></span>
+          </button>
+          
         </center>
       </form>
       <!-- Mensaje de confirmación -->

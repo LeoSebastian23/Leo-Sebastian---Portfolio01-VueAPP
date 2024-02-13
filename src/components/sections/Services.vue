@@ -22,16 +22,19 @@ const openLink = (url) => {
 }
 </style>
 <template>
-  <Layout id="services" class="py-20 -sm:py-10">
-    <div class="flex justify-center items-center mt-3">
+  <Layout id="services" class="py-20 -sm:py-10 ">
+    <div
+      class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg"
+    >
       <i class="bi bi-folder custom-size"></i>
-      <h1 class="title not-italic ">{{ _services.title }}</h1>
+      <h1 class="title not-italic">{{ _services.title }}</h1>
     </div>
     <template v-for="(service, index) in _services.services" :key="index">
+      <div class="flex flex-col -sm:items-center ">
       <div
-        class="relative flex flex-col min-w-0 break-words bg-slate-800 bg-opacity-60 shadow-soft-xl rounded-2xl bg-clip-border m-10"
+        class="relative flex flex-col break-words bg-slate-800 bg-opacity-60 shadow-soft-xl rounded-2xl bg-clip-border m-10 -sm:w-full"
       >
-        <div class="flex-auto p-4">
+        <div class="flex-auto p-4 ">
           <div class="flex flex-wrap -mx-3">
             <div class="max-w-full px-3 lg:w-1/2 lg:flex-none">
               <div class="flex flex-col h-full">
@@ -66,13 +69,13 @@ const openLink = (url) => {
                   </button>
                 </div>
                 <p
-                  class="mt-auto mb-0 font-normal leading-normal text-md group text-slate-100"
+                  class="mt-auto mb-0 font-normal leading-normal text-md group text-slate-100 -sm:mt-2"
                 >
                   <span v-for="(tool, index) in service.tools" :key="index">
-                    <span class="bg-slate-600 px-2 rounded-full">{{
+                    <span class="bg-slate-600 px-2 my-2 rounded-full -sm:px-1">{{
                       tool
                     }}</span>
-                    <span v-if="index < service.tools.length - 1"> | </span>
+                    <span v-if="index < service.tools.length - 1"> / </span>
                   </span>
                 </p>
               </div>
@@ -82,7 +85,11 @@ const openLink = (url) => {
             >
               <div class="h-full rounded-xl">
                 <div class="relative flex items-center justify-center h-full">
-                  <a href="https://github.com/LeoSebastian23" target="_blank">
+                  <a
+                    v-if="service.linkGH"
+                    @click="openLink(service.linkGH)"
+                    target="_blank"
+                  >
                     <img
                       class="imgProyects"
                       :src="service.img"
@@ -95,6 +102,7 @@ const openLink = (url) => {
           </div>
         </div>
       </div>
+    </div>
     </template>
   </Layout>
 </template>

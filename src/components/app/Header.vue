@@ -26,8 +26,8 @@ const isMenuOpen = ref(false);
     </a>
       </div>
       <nav class="flex col-span-2 items-center justify-end -sm:hidden ">
-        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Proyectos</a>
         <a :href="`#${_header.link_3}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Sobre Mi</a>
+        <a :href="`#${_header.link_2}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Proyectos</a>
         <a :href="`#${_header.link_4}`" class="link text-2xl text-slate-300 hover:no-underline hover:text-lime-200 font-mono">Contacto</a>
       </nav>
       <div class="col-span-2 hidden items-center justify-end -sm:flex">

@@ -36,6 +36,12 @@ const _about = {
   ],
   certificados:[
     {
+      name: "Desarrollo de Aplicaciones",
+      place: "CoderHouse",
+      date: "2023/2024",
+      link:"https://www.coderhouse.com/certificados/65c674121963a2623b33737f?lang=es",
+    },
+    {
       name: "Full Stack Javascript",
       place: "Dev Place / ATICMA",
       date: "2022/2023",
@@ -65,12 +71,12 @@ const _about = {
       date: "2023",
       link:"https://www.linkedin.com/learning/certificates/a874dee275331ae1c05c42b97d5c13b5128ab1bb9db2179824b1e6a1ab6fd72b",
     },
-    {
-      name: "GitHub para programadores.",
-      place: "LinkedIn",
-      date: "2023",
-      link:"https://www.linkedin.com/learning/certificates/2b40480d2603aa09dc5f8aff3da5a46890036644465f2cad8e5d6886b0324abe",
-    },
+    // {
+    //   name: "GitHub para programadores.",
+    //   place: "LinkedIn",
+    //   date: "2023",
+    //   link:"https://www.linkedin.com/learning/certificates/2b40480d2603aa09dc5f8aff3da5a46890036644465f2cad8e5d6886b0324abe",
+    // },
     
   ],
 };

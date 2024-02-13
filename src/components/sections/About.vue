@@ -16,7 +16,7 @@ const getIcon = (skillName) => {
 </style>
 <template>
   <Layout id="about" class="py-20 -sm:py-0 -sm:flex flex-col justify-center">
-    <div class="flex justify-center items-center mt-3">
+    <div class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg">
       <i class="bi bi-person-circle custom-size"></i>
       <h1 class="text-center title text-zinc-200 not-italic">
         {{ __about.title }}
@@ -25,8 +25,8 @@ const getIcon = (skillName) => {
     <div
       class="mt-10 card-services-container -sm:mt-10 -sm:gap-0 -md:items-start flex flex-col"
     >
-      <!-- Imagen y descripción -->
       <div class="flex flex-col xl:flex-row items-center gap-8">
+        <!--------------- Imagen ----------------->
         <div class="h-180 lg:w-1/2 xl:h-180">
           <img
             :src="__about.img"
@@ -34,63 +34,65 @@ const getIcon = (skillName) => {
             class="h-full w-full object-cover rounded-full xl:rounded-full"
           />
         </div>
-
-        <div class="flex flex-col xxl:w-1/2 lg:w-1/2 -sm:items-center">
-          <div class="about -sm:w-full">
-            <h1
-              class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl"
-            >
-              💻{{ __about.subtitle_about }}
-            </h1>
-            <p class="mt-3 description text-zinc-200">
-              {{ __about.description_about }}
-            </p>
-            <p class="mt-3 description text-zinc-200">
-              {{ __about.description02_about }}
-            </p>
-            <p class="mt-3 description text-zinc-200">
-              {{ __about.description03_about }}
-            </p>
+        <div class="flex flex-col xxl:w-1/2 lg:w-4/5 -sm:items-center">
+          <!--------------- Descripción ----------------->
+          <div class="flex flex-col -sm:items-center">
+            <div class="about -sm:w-full">
+              <h1
+                class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl"
+              >
+                💻{{ __about.subtitle_about }}
+              </h1>
+              <p class="mt-3 description text-zinc-200">
+                {{ __about.description_about }}
+              </p>
+              <p class="mt-3 description text-zinc-200">
+                {{ __about.description02_about }}
+              </p>
+              <p class="mt-3 description text-zinc-200">
+                {{ __about.description03_about }}
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col -sm:items-center">
-        <div class="experience flex flex-col justify-center -sm:w-full">
-          <div class="flex flex-col items-center justify-center">
-            <h1
-              class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl -sm:mb-2"
-            >
-              🎓Educación
-            </h1>
-            <template
-              v-for="(education, index) in __about.education"
-              :key="index"
-            >
-              <div class="experience-container text-zinc-200">
-                <span class="experience-company text-zinc-200">{{
-                  education.name
-                }}</span>
-                <span class="experience-rol text-zinc-200">{{
-                  education.institute
-                }}</span>
-                <span class="experience-date text-zinc-200">{{
-                  education.date
-                }}</span>
-                <a
-                  class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline"
-                  :href="education.link"
-                  target="_blank"
+          <!--------------- Educación ----------------->
+          <div class="flex flex-col -sm:items-center">
+            <div class="experience flex flex-col justify-center -sm:w-full">
+              <div class="flex flex-col items-center justify-center">
+                <h1
+                  class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl -sm:mb-2"
                 >
-                  Ver</a
+                  🎓Educación
+                </h1>
+                <template
+                  v-for="(education, index) in __about.education"
+                  :key="index"
                 >
+                  <div class="experience-container text-zinc-200">
+                    <span class="experience-company text-zinc-200">{{
+                      education.name
+                    }}</span>
+                    <span class="experience-rol text-zinc-200">{{
+                      education.institute
+                    }}</span>
+                    <span class="experience-date text-zinc-200">{{
+                      education.date
+                    }}</span>
+                    <a
+                      class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline"
+                      :href="education.link"
+                      target="_blank"
+                    >
+                      Ver</a
+                    >
+                  </div>
+                </template>
               </div>
-            </template>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="flex flex-col -sm:items-center">
+      <!--------------- Certificados ----------------->
+      <div class="flex flex-col -sm:items-center ">
         <div class="experience flex flex-col justify-center -sm:w-full">
           <h1
             class="subtitle text-4xl text-zinc-200 mb-5 not-italic flex justify-center -sm:text-center -sm:text-3xl"
@@ -122,8 +124,8 @@ const getIcon = (skillName) => {
           </div>
         </div>
       </div>
-
-      <div class="flex flex-col -sm:items-center">
+      <!--------------- Skills ----------------->
+      <div class="flex flex-col -sm:items-center -sm:w-full">
         <div class="experience flex flex-col justify-center -sm:w-full">
           <h1
             class="subtitle text-4xl text-zinc-200 text-center mb-5 not-italic"
@@ -131,10 +133,10 @@ const getIcon = (skillName) => {
             ✔️Tecnologías
           </h1>
           <div
-            class="grid gap-4 justify-center items-center -sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 "
+            class="grid gap-4 -sm:justify-items-center -sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 "
           >
             <template v-for="(skill, index) in __about.skills" :key="index">
-              <div class="cardSkill m-5">
+              <div class="cardSkill m-5 ">
                 <div class="cardSkill2">
                   <img
                     :src="getIcon(skill.name)"

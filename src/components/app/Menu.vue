@@ -35,16 +35,16 @@ const emit = defineEmits(["close"]);
         >Inicio</a
       >
       <a
-      :href="`#${_header.link_2}`"
-        class="m-0 text-slate-200 mt-6 text-4xl hover:text-lime-200 hover:no-underline link"
-        @click="$emit('close')"
-        >Proyectos</a
-      >
-      <a
       :href="`#${_header.link_3}`"
         class="m-0 text-slate-200 mt-6 text-4xl hover:text-lime-200 hover:no-underline link"
         @click="$emit('close')"
         >Sobre Mi</a
+      >
+      <a
+      :href="`#${_header.link_2}`"
+        class="m-0 text-slate-200 mt-6 text-4xl hover:text-lime-200 hover:no-underline link"
+        @click="$emit('close')"
+        >Proyectos</a
       >
       <a
       :href="`#${_header.link_4}`"

@@ -38,7 +38,7 @@ const _services = {
       ],
       linkGH:"https://github.com/LeoSebastian23/Leo-Sebastian---Portfolio01",
       linkLinkedIn:"",
-      linkWeb:"",
+      linkWeb:"https://leosebastian-portfolio.netlify.app/",
     },
     /*------------------------------------ T-SHIRTS CAHMPIONS / MOBILE ------------------------------------------ */
     {
@@ -70,7 +70,7 @@ const _services = {
     {
       title: "DevCoin",
       description:
-        "Plataforma web para comprar, transferir y guardar criptomonedas.",
+        "Proyecto grupal sobre el desarrollo de una plataforma de compra, venta e intercambio de criptomonedas.Me encargué del desarrollo de la API con las tecnologías Node.js - MySQL - Postman.",
       img: "/services/DevCoin.png",
       tools:[
         "Javascript","MySQL2", "Node.js","Express.js","Joi"," Sequielize","Postman"

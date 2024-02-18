@@ -132,3 +132,69 @@
     color: #fff;
   }
   
+
+
+  /*-------------------------------------------*/
+
+  .contenedorCC{
+    display: flex;
+  }
+  .cardCertificate {
+    width: 400px;
+    height: 260px;
+    perspective: 1000px;
+    margin:20px;
+  }
+  
+  .cardCertificate-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  
+  .cardCertificate:hover .cardCertificate-inner {
+    transform: rotateY(180deg);
+    
+  }
+  
+  .cardCertificate-front,
+  .cardCertificate-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .cardCertificate-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(0deg);
+  }
+  
+  .cardCertificate-back {
+    background-color: #1d1d1d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 2px solid #F08A5D;
+    border-radius: 5px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+
+  .cardLinks{
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .imgCert {
+    position: relative;
+    width: auto;
+    height:auto; 
+}

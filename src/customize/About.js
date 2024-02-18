@@ -40,36 +40,42 @@ const _about = {
       place: "CoderHouse",
       date: "2023/2024",
       link:"https://www.coderhouse.com/certificados/65c674121963a2623b33737f?lang=es",
+      img: "/certificate/CertificadoCoderHouse.png"
     },
     {
       name: "Full Stack Javascript",
       place: "Dev Place / ATICMA",
       date: "2022/2023",
       link:"https://www.linkedin.com/company/constana/",
+      img: "/certificate/fsjs.jpg"
     },
     {
       name: "Introduccion a Bases de datos y SQL.",
       place: "EducacionIT",
       date: "2023",
       link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/62083",
+      img: "/certificate/sql.jpg"
     },
     {
       name: "Software Tester QA.",
       place: "EducacionIT",
       date: "2022",
-      link:"https://www.educacionit.com/perfil/Leonardo-Gauto-696277/certificado/59187",
+      link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/59187",
+      img: "/certificate/qa.jpg"
     },
     {
       name: "Javascript desde cero.",
       place: "EducacionIT",
       date: "2022",
       link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/59524",
+      img: "/certificate/js.jpg"
     },
     {
       name: "Aprende SCRUM.",
       place: "LinkedIn",
       date: "2023",
       link:"https://www.linkedin.com/learning/certificates/a874dee275331ae1c05c42b97d5c13b5128ab1bb9db2179824b1e6a1ab6fd72b",
+      img: "/certificate/scrum.png"
     },
     // {
     //   name: "GitHub para programadores.",

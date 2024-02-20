@@ -44,7 +44,7 @@ var _services = {
     img: "/services/t-shirts-champions01.png",
     tools: ["React Native", "Expo", "Javascript", "Redux", "CSS3", "Firebase"],
     linkGH: "https://github.com/LeoSebastian23/T-Shirts-Football-Champions",
-    linkLinkedIn: "",
+    linkLinkedIn: "https://www.linkedin.com/feed/update/urn:li:activity:7165344316675014656/",
     linkWeb: ""
   },
   /*------------------------------------- APP TAREAS / MOBILE ------------------------------------------------ */

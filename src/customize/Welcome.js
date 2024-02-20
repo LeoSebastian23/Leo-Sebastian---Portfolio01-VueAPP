@@ -4,7 +4,6 @@ const _welcome = {
   title: "LEONARDO SEBASTIAN ",
   description:
     "WEB / MOBILE DEVELOPER ",
-  // button_text: "../../assets/icons/linkedin.png",
 };
 
 export default _welcome;

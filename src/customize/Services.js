@@ -70,12 +70,12 @@ const _services = {
     {
       title: "DevCoin",
       description:
-        "Proyecto grupal sobre el desarrollo de una plataforma de compra, venta e intercambio de criptomonedas.Me encargué del desarrollo de la API con las tecnologías Node.js - MySQL - Postman.",
+        "Proyecto grupal sobre el desarrollo de una plataforma de compra, venta e intercambio de criptomonedas. Me encargué del desarrollo de la API con las tecnologías Node.js - MySQL - Postman.",
       img: "/services/DevCoin.png",
       tools:[
         "Javascript","MySQL2", "Node.js","Express.js","Joi"," Sequielize","Postman"
       ],
-      linkGH:"https://github.com/jrobuschi/DEVCOIN/",
+      linkGH:"https://github.com/LeoSebastian23/DEVCOIN",
       linkLinkedIn:"https://www.linkedin.com/feed/update/urn:li:activity:7028456728413233152/",
       linkWeb:"", 
     },

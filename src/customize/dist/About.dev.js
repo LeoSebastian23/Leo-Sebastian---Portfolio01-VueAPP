@@ -44,6 +44,9 @@ var _about = {
     name: "MySQL",
     icon: "/icons/MYSQL.png"
   }, {
+    name: "MongoDB",
+    icon: "/icons/mongodb.png"
+  }, {
     name: "Git",
     icon: "/icons/git.png"
   }, {

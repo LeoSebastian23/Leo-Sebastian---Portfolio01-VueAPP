@@ -23,8 +23,10 @@ const _about = {
     { name: "NodeJS", icon: "/icons/nodejs.png" },
     { name: "TypeScript", icon: "/icons/typescript.png" },
     { name: "MySQL", icon: "/icons/MYSQL.png" },
+    { name: "MongoDB", icon: "/icons/mongodb.png" },
     { name: "Git", icon: "/icons/git.png" },
     { name: "Postman", icon: "/icons/postman.png" },
+    
   ],
   education:[
     {

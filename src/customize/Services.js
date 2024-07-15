@@ -45,7 +45,7 @@ const _services = {
       title: "Football Jersey Champions",
       description:
         "Una aplicación movil centrada en la venta de camisetas de futbol que han levantado importantes trofeos. Ofrece una experiencia de compra completa y fácil de usar. Se desarrollo con React Native, Expo y Firebase",
-      img: "/services/t-shirts-champions01.png",
+      img: "/services/gif-appJersey.gif",
       tools:[
         "React Native", "Expo", "Javascript","Redux","CSS3","Firebase"
       ],
@@ -58,7 +58,7 @@ const _services = {
       title: "TaskApp - Mobile Application ",
       description:
         "Aplicación personal de gestión de tareas donde recibes notificaciones en tiempo real y eliminacion automatica de tareas caducadas.",
-      img: "/services/task-app.png",
+      img: "/services/git-appTasks.gif",
       tools:[
         "React Native", "Javascript", "Redux","CSS3","Expo"
       ],

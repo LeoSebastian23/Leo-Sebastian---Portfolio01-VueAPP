@@ -80,6 +80,7 @@ const getIcon = (skillName) => {
           <h1 class="subtitle text-4xl text-zinc-200 mb-5 not-italic flex justify-center -sm:text-center -sm:text-3xl">
             📜Cursos y Certificados
           </h1>
+          <p class="flex justify-center">Haz click para ver cada certificado.</p>
           <div class="grid gap-4 -sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             <template v-for="(certificados, index) in __about.certificados" :key="index">
               <div class="contenedorCC">
@@ -104,20 +105,7 @@ const getIcon = (skillName) => {
                 </div>
               </div>
             </div>
-              <!-- <div class="cardLink justify-center">
-                <a class="cardLink1" :href="certificados.link" target="_blank">
-                  <p>{{ certificados.name }}</p>
-                  <p class="small">
-                    {{ certificados.place }}
-                  </p>
-                  <p class="small">
-                    {{ certificados.date }}
-                  </p>
-                  <div class="go-corner" href="#">
-                    <div class="go-arrow">→</div>
-                  </div>
-                </a>
-              </div> -->
+
             </template>
           </div>
         </div>

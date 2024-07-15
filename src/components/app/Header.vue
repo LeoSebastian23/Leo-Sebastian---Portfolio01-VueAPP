@@ -12,7 +12,7 @@ const isMenuOpen = ref(false);
 </style>
 <template>
   <header
-    class="flex w-full py-4 top-0 z-10 fixed backdrop-filter backdrop-blur-md items-center -sm:h-24 -sm:justify-center max-sm:items-center" style="background-color: rgb(254, 243, 199, 0.1);"
+    class="flex w-full py-2 top-0 z-10 fixed backdrop-filter backdrop-blur-md items-center -sm:h-24 -sm:justify-center max-sm:items-center" style="background-color: rgb(254, 243, 199, 0.1);"
   >
     <Layout class="w-full grid grid-cols-3 items-center justify-between">
       <div class="flex col-span-1 items-center">

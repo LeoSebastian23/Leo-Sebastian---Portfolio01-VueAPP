@@ -22,7 +22,7 @@ useHead({
     <div class="flex h-screen items-center justify-center">
       <div class="flex flex-col mx-auto items-center justify-center -sm:mt-10">
         <h1
-          class="bg-clip-text font-semibold color-changing-title mt-10 mb-4 text-center text-transparent text-8xl leading-22 w-4/4 -md:w-full -md:text-6xl"
+          class="bg-clip-text font-semibold color-changing-title mt-20 mb-4 text-center text-transparent text-8xl leading-22 w-4/4 -md:w-full -md:text-6xl"
         >
           {{ _welcome.title }}
         </h1>

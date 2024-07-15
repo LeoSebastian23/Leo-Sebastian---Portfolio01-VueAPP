@@ -45,14 +45,7 @@ const _about = {
       img: "/certificate/CertificadoCoderHouse.png"
     },
     {
-      name: "Full Stack Javascript",
-      place: "Dev Place / ATICMA",
-      date: "2022/2023",
-      link:"https://www.linkedin.com/company/constana/",
-      img: "/certificate/fsjs.jpg"
-    },
-    {
-      name: "Introduccion a Bases de datos y SQL.",
+      name: "Introducción a Bases de datos y SQL.",
       place: "EducacionIT",
       date: "2023",
       link:"https://www.educacionit.com/perfil/leonardo-gauto-696277/certificado/62083",

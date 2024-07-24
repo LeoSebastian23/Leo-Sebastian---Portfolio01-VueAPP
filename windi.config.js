@@ -9,7 +9,7 @@ export default defineConfig({
     "experience-container": "flex flex-col ",
     "experience-company": "font-medium text-xl  inline-block",
     "experience-rol": "font-medium text-lg text-gray-700 inline-block",
-    "experience-date": "font-medium text-base text-gray-500 inline-block",
+    "experience-date": "font-medium text-xl text-gray-500 inline-block",
     link: "font-sans font-bold text-lg ml-8  no-underline hover:underline capitalize",
     title:
       "font-semibold text-center text-5xl subtitle -sm:text-4xl",

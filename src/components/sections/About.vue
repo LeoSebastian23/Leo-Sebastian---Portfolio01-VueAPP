@@ -10,7 +10,6 @@ const getIcon = (skillName) => {
 <style>
 .custom-size {
   font-size: 48px;
-  /* Tamaño personalizado */
   margin-right: 10px;
 }
 </style>
@@ -63,6 +62,9 @@ const getIcon = (skillName) => {
                     }}</span>
                     <span class="experience-date text-zinc-200">{{
                       education.date
+                    }}</span>
+                    <span class="experience-rol text-zinc-200 ">{{ 
+                      education.description_1  
                     }}</span>
                     <a class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline"
                       :href="education.link" target="_blank">

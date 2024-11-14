@@ -19,7 +19,7 @@ useHead({
   title: "Leo Sebastian | Portfolio",
   meta: [
     {
-      name: `description`,
+      name: `Portfolio`,
       content: "Leo Sebastian | Portfolio",
     },
   ],

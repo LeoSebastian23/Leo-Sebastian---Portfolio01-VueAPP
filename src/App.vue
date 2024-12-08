@@ -30,8 +30,8 @@ useHead({
   <Header></Header>
   <main>
     <Welcome />
-    <About />
     <Services />
+    <About />
     <Contact />
   </main>
   <Footer></Footer>

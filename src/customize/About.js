@@ -1,12 +1,12 @@
 const _about = {
   title: "Sobre mi",
-  subtitle_about: "Developer FullStack en Javascript",
+  subtitle_about: "Developer Web",
   description_about:
-    "Hola! 🙋‍♂️. Soy un apasionado desarrollador con sólidas habilidades en React y React Native, especializado en la creación de soluciones eficientes y atractivas para aplicaciones web y móviles.",
+    "Hola! 🙋‍♂️. Me especializo en el desarrollo Full Stack, utilizando frameworks de JavaScript para crear interfaces interactivas y dinámicas, y construyendo backends solidos y escalables que soporten aplicaciones de alto rendimiento.",
   description02_about:
-    "Mi profundo conocimiento de JavaScript y su ecosistema me permite ofrecer soluciones ante cualquier tarea.",
+    "Mi objetivo es ofrecer soluciones web completas. Trabajo con compromiso y dedicación para aportar valor en cada proyecto. Siempre estoy en la búsqueda de nuevos retos y aprendizaje, con el objetivo de mejorar continuamente mis habilidades y entregar resultados de calidad.",
   description03_about:
-    "Ansío contribuir con mi experiencia y aprender nuevas tecnologías en un entorno de desarrollo colaborativo.",
+    "Si estás buscando un desarrollador web proactivo, enfocado en resultados y que pueda llevar tu proyecto al siguiente nivel, me encantaría colaborar contigo.",
   img: "/services/Me.jpeg",
   experiences: [
     {

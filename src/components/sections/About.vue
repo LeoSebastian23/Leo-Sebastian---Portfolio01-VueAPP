@@ -1,6 +1,7 @@
 <script setup>
 import Layout from "../app/Layout.vue";
 import __about from "../../customize/About";
+import _about from "../../customize/About";
 
 const getIcon = (skillName) => {
   const skill = __about.skills.find((s) => s.name === skillName);
@@ -8,156 +9,155 @@ const getIcon = (skillName) => {
 };
 </script>
 <style>
-.custom-size {
-  font-size: 48px;
-  margin-right: 10px;
+.bg-neutral-800 {
+  background-color: rgba(15, 16, 18, 0.6); 
+}
+
+.bg-neutral-700 {
+  background-color: #3a3c43; /* Slightly lighter */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:text-orange-300:hover {
+  color: #f6ad55; /* Bright orange */
+}
+
+
+.justify-items-center {
+  justify-items: center;
 }
 </style>
 <template>
-  <Layout id="about" class="py-20 -sm:py-0 -sm:flex flex-col justify-center">
+  <Layout id="about" class="py-20 px-6 sm:px-12">
+    <!-- Título centrado -->
     <div
       class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg"
     >
-      <i class="bi bi-person-circle custom-size"></i>
+      <i class="bi bi-folder custom-size"></i>
       <h1 class="text-center title text-zinc-200 not-italic">
-        {{ __about.title }}
+        {{ _about.title }}
       </h1>
     </div>
-    <div
-      class="mt-10 card-services-container -sm:mt-10 -sm:gap-0 -md:items-start flex flex-col"
+    <!-- Sección Acerca de mí -->
+    <section
+      class="bg-neutral-800 rounded-lg p-6 text-zinc-200 mb-10 shadow-lg mt-4"
     >
-      <div class="flex flex-col xl:flex-row items-center gap-8">
-        <!--------------- Imagen ----------------->
-        <div class="h-180 lg:w-1/2 xl:h-180">
-          <img
-            :src="__about.img"
-            alt="services-image"
-            class="h-full w-full object-cover rounded-full xl:rounded-full"
-          />
-        </div>
-        <div class="flex flex-col xxl:w-1/2 lg:w-4/5 -sm:items-center">
-          <!--------------- Descripción ----------------->
-          <div class="flex flex-col -sm:items-center">
-            <div class="about -sm:w-full">
-              <h1
-                class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl"
-              >
-                💻{{ __about.subtitle_about }}
-              </h1>
-              <p class="mt-3 description text-zinc-200">
-                {{ __about.description_about }}
-              </p>
-              <p class="mt-3 description text-zinc-200">
-                {{ __about.description02_about }}
-              </p>
-              <p class="mt-3 description text-zinc-200">
-                {{ __about.description03_about }}
-              </p>
-            </div>
-          </div>
-          <!--------------- Educación ----------------->
-          <div class="flex flex-col -sm:items-center">
-            <div class="experience flex flex-col justify-center -sm:w-full">
-              <div class="flex flex-col items-center justify-center">
-                <h1
-                  class="subtitle text-4xl mb-5 text-zinc-200 not-italic flex justify-center -sm:text-3xl -sm:mb-2"
-                >
-                  🎓Educación
-                </h1>
-                <template
-                  v-for="(education, index) in __about.education"
-                  :key="index"
-                >
-                  <div class="experience-container text-zinc-200">
-                    <span class="experience-company text-zinc-200">{{
-                      education.name
-                    }}</span>
-                    <span class="experience-rol text-zinc-200">{{
-                      education.institute
-                    }}</span>
-                    <span class="experience-date text-zinc-200">{{
-                      education.date
-                    }}</span>
-                    <span class="experience-rol text-zinc-200">{{
-                      education.description_1
-                    }}</span>
-                    <a
-                      class="experience-date flex justify-end text-zinc-200 hover:text-orange-200 no-underline"
-                      :href="education.link"
-                      target="_blank"
-                    >
-                      Ver</a
-                    >
-                  </div>
-                </template>
-              </div>
-            </div>
-          </div>
+      <div class="flex flex-col lg:flex-row items-center gap-8">
+        <!-- Imagen -->
+        <img
+          :src="__about.img"
+          alt="profile-image"
+          class="w-48 h-48 lg:w-64 lg:h-64 rounded-full shadow-md"
+        />
+        <!-- Descripción -->
+        <div class="flex flex-col space-y-4">
+          <h2 class="text-xl font-semibold">💻 {{ __about.subtitle_about }}</h2>
+          <p>{{ __about.description_about }}</p>
+          <p>{{ __about.description02_about }}</p>
+          <p>{{ __about.description03_about }}</p>
         </div>
       </div>
-      <!--------------- Certificados ----------------->
-      <div class="flex flex-col -sm:items-center">
-        <div class="experience flex flex-col justify-center -sm:w-full">
-          <h1
-            class="subtitle text-4xl text-zinc-200 mb-5 not-italic flex justify-center -sm:text-center -sm:text-3xl"
-          >
-            📜Cursos y Certificados
-          </h1>
-          <p class="flex justify-center">
-            Haz click para ver cada certificado.
-          </p>
-          <div
-            class="grid gap-4 -sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
-          >
-            <template
-              v-for="(certificados, index) in __about.certificados"
-              :key="index"
-            >
-              <div class="contenedorCC">
-                <div class="cardCF">
-                  <img
-                      :src="certificados.img"
-                      alt="certificate"
-                      class="imgCert"
-                    />
-                  <div class="cardCF__content">
-                    <p class="cardCF__title">{{ certificados.name }}</p>
-                    <p class="cardCF__description">{{ certificados.place }}</p>
-                    <p class="cardCF__description">{{ certificados.date }}</p>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <!--------------- Skills ----------------->
-      <div class="flex flex-col -sm:items-center -sm:w-full">
-        <div class="experience flex flex-col justify-center -sm:w-full">
-          <h1
-            class="subtitle text-4xl text-zinc-200 text-center mb-5 not-italic"
-          >
-            ✔️Tecnologías
-          </h1>
-          <div
-            class="grid gap-4 -sm:justify-items-center -sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6"
-          >
-            <template v-for="(skill, index) in __about.skills" :key="index">
-              <div class="cardSkill m-5">
-                <div class="cardSkill2">
-                  <img
-                    :src="getIcon(skill.name)"
-                    alt="icon"
-                    class="icon w-25"
-                  />
-                  <span>{{ skill.name }}</span>
-                </div>
-              </div>
-            </template>
+    <!-- Sección Experiencia -->
+    <section
+      class="bg-neutral-800 rounded-lg p-6 text-zinc-200 mb-10 shadow-lg"
+    >
+      <h2 class="text-3xl font-bold text-center mb-6">💼 Experiencia</h2>
+      <div class="space-y-6">
+        <template v-for="(experiences, index) in __about.experiences" :key="index">
+          <div class="p-4 bg-neutral-700 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold">{{ experiences.rol }}</h3>
+            <h4>📍 {{ experiences.company }}</h4>
+            <h4>📆 {{ experiences.date }}</h4>
+            <p>📁 {{ experiences.tasks }}</p>
+
           </div>
-        </div>
+        </template>
       </div>
-    </div>
+    </section>
+
+    <!-- Sección Educación -->
+    <section
+      class="bg-neutral-800 rounded-lg p-6 text-zinc-200 mb-10 shadow-lg"
+    >
+      <h2 class="text-3xl font-bold text-center mb-6">🎓 Educación</h2>
+      <div class="space-y-6">
+        <template v-for="(education, index) in __about.education" :key="index">
+          <div class="p-4 bg-neutral-700 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold">{{ education.name }}</h3>
+            <p>{{ education.institute }} - {{ education.date }}</p>
+            <p>{{ education.description_1 }}</p>
+            <a
+              :href="education.link"
+              target="_blank"
+              class="text-mountain-meadow underline hover:text-orange-300"
+            >
+              Ver más
+            </a>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Sección Cursos y Certificados -->
+    <section
+      class="bg-neutral-800 rounded-lg p-6 text-zinc-200 mb-10 shadow-lg"
+    >
+      <h2 class="text-3xl font-bold text-center mb-6">
+        📜 Cursos y Certificados
+      </h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <template
+          v-for="(certificado, index) in __about.certificados"
+          :key="index"
+        >
+          <div
+            class="bg-neutral-700 p-4 rounded-lg shadow-md transform hover:scale-102 transition-all"
+          >
+            <img
+              :src="certificado.img"
+              alt="certificate"
+              class="w-full h-40 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-lg font-semibold">{{ certificado.name }}</h3>
+            <p>{{ certificado.place }}</p>
+            <p>{{ certificado.date }}</p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Sección Tecnologías -->
+    <section class="bg-neutral-800 rounded-lg p-6 text-zinc-200 shadow-lg">
+      <h2 class="text-3xl font-bold text-center mb-6">✔️ Tecnologías</h2>
+      <div
+        class="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-items-center"
+      >
+        <template v-for="(skill, index) in __about.skills" :key="index">
+          <div
+            class="flex flex-col items-center p-4 bg-neutral-700 rounded-lg shadow-md transform hover:scale-105 "
+          >
+            <img :src="getIcon(skill.name)" alt="icon" class="w-16 h-16 mb-2" />
+            <span class="text-sm font-semibold">{{ skill.name }}</span>
+          </div>
+        </template>
+      </div>
+    </section>
   </Layout>
 </template>

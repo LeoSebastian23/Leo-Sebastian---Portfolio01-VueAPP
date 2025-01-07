@@ -1,5 +1,5 @@
 const _services = {
-  title: "Proyectos",
+  title: "Proyectos y colaboraciones",
   services: [
     /*------------------------------------------- POLICLINICO ------------------------------------------ */ 
     {

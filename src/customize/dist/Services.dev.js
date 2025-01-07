@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _services = {
-  title: "Proyectos",
+  title: "Proyectos y colaboraciones",
   services: [
   /*------------------------------------------- POLICLINICO ------------------------------------------ */
   {

@@ -6,15 +6,26 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _about = {
   title: "Sobre mi",
-  subtitle_about: "Developer Web",
+  subtitle_about: "Developer Full Stack",
   description_about: "Hola! 🙋‍♂️. Me especializo en el desarrollo Full Stack, utilizando frameworks de JavaScript para crear interfaces interactivas y dinámicas, y construyendo backends solidos y escalables que soporten aplicaciones de alto rendimiento.",
   description02_about: "Mi objetivo es ofrecer soluciones web completas. Trabajo con compromiso y dedicación para aportar valor en cada proyecto. Siempre estoy en la búsqueda de nuevos retos y aprendizaje, con el objetivo de mejorar continuamente mis habilidades y entregar resultados de calidad.",
   description03_about: "Si estás buscando un desarrollador web proactivo, enfocado en resultados y que pueda llevar tu proyecto al siguiente nivel, me encantaría colaborar contigo.",
   img: "/services/Me.jpeg",
   experiences: [{
+    company: "ZEAZE",
+    rol: "Full Stack Developer",
+    tasks: "Diseño, desarrollo e implementación de proyectos tecnológicos con enfoque en soluciones técnicas efectivas, buenas prácticas y optimización de rendimiento y seguridad.",
+    date: "Noviembre 2024 - Actualidad"
+  }, {
     company: "Freelance",
-    rol: "Front End Developer",
-    date: "Diciembre 2022 - Actualidad"
+    rol: "Back end Developer",
+    tasks: "Desarrollo de APIs mediante Node.js y MongoDB. Tareas de implementación y pruebas.",
+    date: "2024/2025"
+  }, {
+    company: "Constana",
+    rol: "Producción de Contenido Educativo",
+    tasks: "Presentar y conducir clases de JavaScript, con enfoque en la enseñanza práctica a través de pantalla compartida y explicación detallada del código relevante.",
+    date: "2023"
   }],
   skills: [{
     name: "HTML5",

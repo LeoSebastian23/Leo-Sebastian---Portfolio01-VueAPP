@@ -1,6 +1,6 @@
 const _about = {
   title: "Sobre mi",
-  subtitle_about: "Developer Web",
+  subtitle_about: "Developer Full Stack",
   description_about:
     "Hola! 🙋‍♂️. Me especializo en el desarrollo Full Stack, utilizando frameworks de JavaScript para crear interfaces interactivas y dinámicas, y construyendo backends solidos y escalables que soporten aplicaciones de alto rendimiento.",
   description02_about:
@@ -10,9 +10,22 @@ const _about = {
   img: "/services/Me.jpeg",
   experiences: [
     {
+      company: "ZEAZE",
+      rol: "Full Stack Developer",
+      tasks:"Diseño, desarrollo e implementación de proyectos tecnológicos con enfoque en soluciones técnicas efectivas, buenas prácticas y optimización de rendimiento y seguridad.",
+      date: "Noviembre 2024 - Actualidad",
+    },
+    {
       company: "Freelance",
-      rol: "Front End Developer",
-      date: "Diciembre 2022 - Actualidad",
+      rol: "Back end Developer",
+      tasks:"Desarrollo de APIs mediante Node.js y MongoDB. Tareas de implementación y pruebas.",
+      date: "2024/2025",
+    },
+    {
+      company: "Constana",
+      rol: "Producción de Contenido Educativo",
+      tasks:"Presentar y conducir clases de JavaScript, con enfoque en la enseñanza práctica a través de pantalla compartida y explicación detallada del código relevante.",
+      date: "2023",
     },  ],
   skills: [
     { name: "HTML5", icon: "/icons/HTML5.png" },

@@ -1,50 +1,44 @@
-.imgProyects{
-    position: relative;
-    /* z-index: 20; */
-    width: auto;
-    border-radius: 0.375rem/* 6px */;
+
+
+/* Tamaño del icono */
+.custom-size {
+  font-size: 48px;
+  margin-right: 10px;
 }
 
-.imgProyects:hover {
-    opacity: 0.6;
-}
-
-.button-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none; /* Oculta inicialmente el contenedor de botones */
-}
-
-.max-w-full:hover .button-container {
-  display: flex; /* Muestra el contenedor de botones al hacer hover en el div principal */
+/* Botones */
+.btnLinks {
+  background-color: rgb(0, 109, 139);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-.ver{
-    font-size: xx-large;
-    font-weight: 600;
-    letter-spacing: 4;
+.btnLinks:hover {
+  background-color: rgb(36, 161, 196);
+  transform: translateY(-2px);
 }
 
-.btnContainerLinks{
-    display: flex;
-    justify-content:flex-start;
+/* Imagen */
+img {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.btnLinks{
-    background-color: rgb(0, 109, 139);
-    border-radius: 15px ;
-    padding: 6px;
-    margin-right: 5px;
-    font-size: larger;
-    height: auto;
-    width: 100px;
-    margin-bottom: 8px;
-    align-items: center;
+img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
 }
-.btnLinks:hover{
-    background-color: rgb(36, 161, 196);
+
+/* Contenedor responsivo */
+@media (min-width: 1024px) {
+  .grid {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
+

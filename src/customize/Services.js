@@ -1,6 +1,19 @@
 const _services = {
   title: "Proyectos y colaboraciones",
   services: [
+     /*------------------------------------------- Palindrome Checker Challenge ------------------------------------------ */ 
+     {
+      title: "Palindrome Checker Challenge",
+      description: 
+        "Aplicación full-stack diseñada para verificar si una palabra o frase es un palíndromo. Incluye un backend en Node.js con endpoints para la verificación y almacenamiento del historial, y un frontend en Next.js con una interfaz intuitiva que permite ingresar datos, visualizar resultados y gestionar el historial.",
+      img: "/services/palindromeChecker.png",
+      tools:[
+        "Next.js", "Node.js","TypeScript","Javascript","TailwindCSS"
+      ],
+      linkGH:"https://github.com/LeoSebastian23/challenge-palindrome",
+      linkLinkedIn:"",
+      linkWeb:"https://challenge-palindrome.vercel.app/",
+    },
     /*------------------------------------------- POLICLINICO ------------------------------------------ */ 
     {
       title: "Policlinico",
@@ -10,7 +23,7 @@ const _services = {
       tools:[
         "Next.js","TypeScript", "TailwindCSS", "CSS3", "HTML5"
       ],
-      linkGH:"https://github.com/LeoSebastian23/policlinico-salud-vital",
+      linkGH:"https://github.com/LeoSebastian23-/policlinico-salud-vital",
       linkLinkedIn:"",
       linkWeb:"https://policlinico-salud-vital.vercel.app/",
     },

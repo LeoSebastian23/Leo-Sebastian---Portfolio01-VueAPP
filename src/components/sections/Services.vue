@@ -58,7 +58,7 @@ const openLink = (url) => {
         <img
           :src="service.img"
           alt="services-image"
-          class="w-full h-48 object-cover"
+          class="w-full h-48 object-contain"
         />
         <!-- Capa de overlay sobre la imagen -->
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>

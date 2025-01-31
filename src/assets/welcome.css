@@ -32,6 +32,8 @@
     border-radius: 1.25rem;
     margin-top: 10px;
   }
+  
+  /* Estilos para el loader */
   .loader {
     color: rgb(124, 124, 124);
     font-family: "Poppins", sans-serif;
@@ -48,32 +50,46 @@
     border-radius: 8px;
   }
   
+  /* Estilos para el texto dinámico */
   .words {
     overflow: hidden;
     position: relative;
   }
   
   .word {
-    display: block;
-    height: 100%;
     padding-left: 6px;
     padding-right: 6px;
-    color: #56e470;
+    color: #56e470; /* Color verde para el texto dinámico */
+    border-right: 2px solid #56e470; /* Cursor */
+    animation: blink-caret 0.75s step-end infinite;
   }
-
+  
+  /* Animación del cursor */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #56e470; /* Color del cursor */
+    }
+  }
+  
+  /* Estilos responsivos */
   @media (max-width: 576px) {
     .loader {
-      font-size: 20px; 
+      font-size: 20px;
     }
-    
-    .dev{
+  
+    .dev {
       display: flex;
       justify-content: center;
       align-items: center;
     }
+  
     .word {
-      padding-left: 3px; 
-      padding-right: 3px; 
+      padding-left: 3px;
+      padding-right: 3px;
       display: flex;
       justify-content: center;
       align-items: center;

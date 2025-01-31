@@ -20,8 +20,6 @@ require("./assets/contact.css");
 
 require("./assets/services.css");
 
-var _vue3Particles = _interopRequireDefault(require("vue3-particles"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /*--------Create APP----------*/
@@ -35,14 +33,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 /*--------Estilos CSS----------*/
 // Importa los estilos CSS personalizados.
-
-/*--------Particles----------*/
-// Importa y configura la librería de partículas para efectos visuales.
 // Crea la aplicación y añade el encabezado y partículas.
 var app = (0, _vue.createApp)(_App["default"]);
 var head = (0, _head.createHead)();
-app.use(_vue3Particles["default"]); // Añade partículas.
-
 app.use(head); // Añade soporte de metadatos.
 
 app.mount("#app"); // Monta la aplicación en el elemento con id "app".

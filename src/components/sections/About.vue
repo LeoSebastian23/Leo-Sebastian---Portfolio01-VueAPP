@@ -1,7 +1,33 @@
 <script setup>
 import Layout from "../app/Layout.vue";
+import { computed } from "vue";
 import __about from "../../customize/About";
 import _about from "../../customize/About";
+
+const frontendTechs = computed(() =>
+  __about.skills.filter((tech) =>
+    [
+      "NextJS",
+      "TypeScript",
+      "ReactJS",
+      "VueJS",
+      "JavaScript",
+      "TAILWIND",
+      "CSS3",
+      "HTML5",
+    ].includes(tech.name)
+  )
+);
+
+const backendTechs = computed(() =>
+  __about.skills.filter((tech) =>
+    ["NodeJS","Express", "Java", "Spring Boot", "MySQL", "MongoDB"].includes(tech.name)
+  )
+);
+
+const testingTechs = computed(() =>
+  __about.skills.filter((tech) => ["Postman"].includes(tech.name))
+);
 
 const getIcon = (skillName) => {
   const skill = __about.skills.find((s) => s.name === skillName);
@@ -10,7 +36,7 @@ const getIcon = (skillName) => {
 </script>
 <style>
 .bg-neutral-800 {
-  background-color: rgba(15, 16, 18, 0.6); 
+  background-color: rgba(15, 16, 18, 0.6);
 }
 
 .bg-neutral-700 {
@@ -37,7 +63,6 @@ const getIcon = (skillName) => {
   color: #f6ad55; /* Bright orange */
 }
 
-
 .justify-items-center {
   justify-items: center;
 }
@@ -48,7 +73,7 @@ const getIcon = (skillName) => {
     <div
       class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg"
     >
-      <i class="bi bi-folder custom-size"></i>
+      <i class="bi bi-person custom-size"></i>
       <h1 class="text-center title text-zinc-200 not-italic">
         {{ _about.title }}
       </h1>
@@ -57,7 +82,9 @@ const getIcon = (skillName) => {
     <section
       class="bg-neutral-800 rounded-lg p-6 text-zinc-200 mb-10 shadow-lg mt-4"
     >
-      <div class="flex flex-col lg:flex-row items-center gap-8">
+      <div
+        class="flex flex-col lg:flex-row items-center gap-8 fade-in-up-scroll"
+      >
         <!-- Imagen -->
         <img
           :src="__about.img"
@@ -80,13 +107,15 @@ const getIcon = (skillName) => {
     >
       <h2 class="text-3xl font-bold text-center mb-6">💼 Experiencia</h2>
       <div class="space-y-6">
-        <template v-for="(experiences, index) in __about.experiences" :key="index">
+        <template
+          v-for="(experiences, index) in __about.experiences"
+          :key="index"
+        >
           <div class="p-4 bg-neutral-700 rounded-lg shadow-md">
             <h3 class="text-lg font-semibold">{{ experiences.rol }}</h3>
             <h4>📍 {{ experiences.company }}</h4>
             <h4>📆 {{ experiences.date }}</h4>
             <p>📁 {{ experiences.tasks }}</p>
-
           </div>
         </template>
       </div>
@@ -146,17 +175,58 @@ const getIcon = (skillName) => {
     <!-- Sección Tecnologías -->
     <section class="bg-neutral-800 rounded-lg p-6 text-zinc-200 shadow-lg">
       <h2 class="text-3xl font-bold text-center mb-6">✔️ Tecnologías</h2>
-      <div
-        class="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 justify-items-center"
-      >
-        <template v-for="(skill, index) in __about.skills" :key="index">
+
+      <div class="flex flex-col gap-8">
+        <!-- Frontend -->
+        <div>
+          <h3 class="text-2xl font-semibold text-left mb-4">🎨 Frontend:</h3>
           <div
-            class="flex flex-col items-center p-4 bg-neutral-700 rounded-lg shadow-md transform hover:scale-105 "
+            class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 justify-items-center"
           >
-            <img :src="getIcon(skill.name)" alt="icon" class="w-16 h-16 mb-2" />
-            <span class="text-sm font-semibold">{{ skill.name }}</span>
+            <template v-for="(tech, index) in frontendTechs" :key="index">
+              <div
+                class="flex flex-col items-center p-4 bg-neutral-700 rounded-lg shadow-md transform hover:scale-105 transition-transform"
+              >
+                <img :src="tech.icon" :alt="tech.name" class="w-16 h-16 mb-2" />
+                <span class="text-sm font-semibold">{{ tech.name }}</span>
+              </div>
+            </template>
           </div>
-        </template>
+        </div>
+
+        <!-- Backend -->
+        <div>
+          <h3 class="text-2xl font-semibold text-left mb-4">🖥️ Backend:</h3>
+          <div
+            class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 justify-items-center"
+          >
+            <template v-for="(tech, index) in backendTechs" :key="index">
+              <div
+                class="flex flex-col items-center p-4 bg-neutral-700 rounded-lg shadow-md transform hover:scale-105 transition-transform"
+              >
+                <img :src="tech.icon" :alt="tech.name" class="w-16 h-16 mb-2" />
+                <span class="text-sm font-semibold">{{ tech.name }}</span>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- Testing -->
+        <div>
+          <h3 class="text-2xl font-semibold text-left mb-4">🛠️ Testing:</h3>
+          <div
+            class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 justify-items-center"
+          >
+            <template v-for="(tech, index) in testingTechs" :key="index">
+              <div
+                class="flex flex-col items-center p-4 bg-neutral-700 rounded-lg shadow-md transform hover:scale-105 transition-transform"
+              >
+                <img :src="tech.icon" :alt="tech.name" class="w-16 h-16 mb-2" />
+                <span class="text-sm font-semibold">{{ tech.name }}</span>
+              </div>
+            </template>
+          </div>
+        </div>
       </div>
     </section>
   </Layout>

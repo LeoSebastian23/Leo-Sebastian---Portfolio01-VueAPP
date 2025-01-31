@@ -10,23 +10,6 @@ const openLink = (url) => {
 </script>
 
 <style>
-.btnLinks {
-  background-color: rgb(0, 109, 139); /* Mountain Meadow */
-  border-radius: 50px;
-  padding: 8px 16px;
-  font-size: 18px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.btnLinks:hover {
-  background-color: rgb(36, 161, 196); /* Tonalidad más brillante */
-  transform: translateY(-2px);
-}
 
 .grid {
   display: grid;
@@ -45,76 +28,86 @@ const openLink = (url) => {
     <!-- Título centrado -->
     <div class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg">
       <i class="bi bi-folder custom-size"></i>
-      <h1 class="text-center title text-zinc-200 not-italic">{{ _services.title }}</h1>
+      <h1 class="text-center title text-zinc-200 not-italic ml-2">
+        {{ _services.title }}
+      </h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center mt-10 px-6">
-  <template v-for="(service, index) in _services.services" :key="index">
-    <div
-      class="bg-slate-800 bg-opacity-95 shadow-xl rounded-xl overflow-hidden w-full max-w-md transform transition-all hover:-translate-y-2 hover:shadow-md hover:shadow-teal-700"
-    >
-      <!-- Imagen del proyecto -->
-      <div class="relative">
-        <img
-          :src="service.img"
-          alt="services-image"
-          class="w-full h-48 object-contain"
-        />
-        <!-- Capa de overlay sobre la imagen -->
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80"></div>
-        <!-- Título sobre la imagen -->
-        <h3 class="absolute bottom-4 left-4 text-xl font-bold text-mountain-meadow">
-          {{ service.title }}
-        </h3>
-      </div>
-
-      <!-- Contenido del cuerpo -->
-      <div class="p-6 flex flex-col space-y-4">
-        <!-- Descripción -->
-        <p class="text-gray-300 text-sm text-left leading-relaxed">
-          {{ service.description }}
-        </p>
-
-        <!-- Herramientas -->
-        <div class="flex flex-wrap gap-2">
-          <span
-            v-for="(tool, index) in service.tools"
-            :key="index"
-            class="text-xs bg-slate-600 px-3 py-1 rounded-full text-white"
+    <!-- Grid de proyectos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-6">
+      <template v-for="(service, index) in _services.services" :key="index">
+        <div
+          class="bg-slate-800 rounded-xl overflow-hidden transform transition-all hover:scale-102 hover:shadow-2xl hover:shadow-teal-700/50"
+        >
+          <!-- Imagen del proyecto -->
+          <div
+            class="relative h-48 bg-cover bg-center"
+            :style="{ backgroundImage: `url(${service.img})` }"
           >
-            {{ tool }}
-          </span>
+            <!-- Overlay para el título y botones -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+              <h3 class="text-2xl font-bold text-white">
+                {{ service.title }}
+              </h3>
+              <div class="flex space-x-2 mt-2">
+                <button
+                  v-if="service.linkGH"
+                  class="btnLinks hover:text-teal-400 transition-colors"
+                  @click="openLink(service.linkGH)"
+                >
+                  <i class="bi bi-github text-xl"></i>
+                </button>
+                <button
+                  v-if="service.linkLinkedIn"
+                  class="btnLinks hover:text-teal-400 transition-colors"
+                  @click="openLink(service.linkLinkedIn)"
+                >
+                  <i class="bi bi-linkedin text-xl"></i>
+                </button>
+                <button
+                  v-if="service.linkWeb"
+                  class="btnLinks hover:text-teal-400 transition-colors"
+                  @click="openLink(service.linkWeb)"
+                >
+                  <i class="bi bi-globe text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenido del cuerpo -->
+          <div class="p-6">
+            <p class="text-gray-300 text-sm text-left leading-relaxed">
+              {{ service.description }}
+            </p>
+          </div>
         </div>
-
-        <!-- Botones -->
-        <div class="flex justify-center space-x-4 mt-4">
-          <button
-            v-if="service.linkGH"
-            class="btnLinks"
-            @click="openLink(service.linkGH)"
-          >
-            <i class="bi bi-github"></i>
-          </button>
-          <button
-            v-if="service.linkLinkedIn"
-            class="btnLinks"
-            @click="openLink(service.linkLinkedIn)"
-          >
-            <i class="bi bi-linkedin"></i>
-          </button>
-          <button
-            v-if="service.linkWeb"
-            class="btnLinks"
-            @click="openLink(service.linkWeb)"
-          >
-            <i class="bi bi-globe"></i>
-          </button>
-        </div>
-      </div>
+      </template>
     </div>
-  </template>
-</div>
-
   </Layout>
 </template>
 
+<script>
+export default {
+  methods: {
+    openLink(url) {
+      window.open(url, "_blank");
+    },
+  },
+};
+</script>
+
+<style scoped>
+/* Estilos personalizados */
+.btnLinks {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btnLinks:hover {
+  color: #2dd4bf; /* Color teal-400 */
+}
+</style>

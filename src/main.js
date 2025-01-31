@@ -20,15 +20,10 @@ import "./assets/about.css";
 import "./assets/contact.css";
 import "./assets/services.css";
 
-/*--------Particles----------*/
-// Importa y configura la librería de partículas para efectos visuales.
-import Particles from 'vue3-particles';
-
 // Crea la aplicación y añade el encabezado y partículas.
 const app = createApp(App);
 const head = createHead();
 
-app.use(Particles); // Añade partículas.
 app.use(head); // Añade soporte de metadatos.
 app.mount("#app"); // Monta la aplicación en el elemento con id "app".
 

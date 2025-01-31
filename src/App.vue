@@ -1,7 +1,4 @@
 <script setup>
-//Helper components
-import Layout from "./components/app/Layout.vue";
-
 //App componentes
 import Header from "./components/app/Header.vue";
 import Footer from "./components/app/Footer.vue";
@@ -26,13 +23,32 @@ useHead({
 });
 </script>
 
+<style>
+body {
+  margin: 0; /* Elimina márgenes por defecto */
+  font-family: 'Inter', sans-serif; /* Fuente moderna */
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+#app {
+  position: relative;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la ventana */
+  background: radial-gradient(circle at 50% 50%, #101b00, #000000);
+  transition: background-position 0.2s ease-out; /* Suavidad al movimiento */
+}
+</style>
+
 <template>
-  <Header></Header>
-  <main>
-    <Welcome />
-    <Services />
-    <About />
-    <Contact />
-  </main>
-  <Footer></Footer>
+  <div id="app" @mousemove="handleMouseMove">
+    <Header></Header>
+    <main>
+      <Welcome />
+      <Services />
+      <About />
+      <Contact />
+    </main>
+    <Footer></Footer>
+  </div>
 </template>
+
+

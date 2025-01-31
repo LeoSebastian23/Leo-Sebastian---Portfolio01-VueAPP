@@ -32,10 +32,8 @@ const _about = {
     { name: "CSS3", icon: "/icons/CSS3.png" },
     { name: "JavaScript", icon: "/icons/JAVASCRIPT.png" },
     { name: "ReactJS", icon: "/icons/reactjs.png" },
-    { name: "React Native", icon: "/icons/reactjs.png" },
-    { name: "NodeJS", icon: "/icons/nodejs.png" },
+    { name: "NodeJS", icon: "/icons/nodejs.svg" },
     { name: "VueJS", icon: "/icons/vuejs.png" },
-    { name: "Angular", icon: "/icons/angular.png" },
     { name: "TypeScript", icon: "/icons/typescript.png" },
     { name: "Java", icon: "/icons/java.png" },
     { name: "Spring Boot", icon: "/icons/Spring boot.png" },
@@ -43,6 +41,9 @@ const _about = {
     { name: "MongoDB", icon: "/icons/mongodb.png" },
     { name: "Git", icon: "/icons/git.png" },
     { name: "Postman", icon: "/icons/postman.png" },
+    { name: "NextJS", icon: "/icons/next.svg" },
+    { name: "Express", icon: "/icons/express.svg" },
+    { name: "TAILWIND", icon: "/icons/TAILWINDCSS.svg" },
   ],
   education: [
     {

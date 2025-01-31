@@ -3,7 +3,7 @@ import { useHead } from "@vueuse/head";
 import Layout from "../app/Layout.vue";
 import _welcome from "../../customize/Welcome";
 import _header from "../../customize/Header";
-import Particles from "../app/Particles.vue";
+import { ref, onMounted } from "vue";
 
 useHead({
   title: "Leo Sebastian | Portfolio",
@@ -14,23 +14,63 @@ useHead({
     },
   ],
 });
+
+
+const texts = ["Full Stack", "Software", "Web"];
+const currentText = ref("");
+const currentIndex = ref(0);
+const isDeleting = ref(false);
+const typingSpeed = 150; // Velocidad de escritura
+const deletingSpeed = 100; // Velocidad de borrado
+const pauseBetweenTexts = 2000; // Pausa entre textos
+
+const typeText = () => {
+  const fullText = texts[currentIndex.value];
+
+  if (isDeleting.value) {
+    // Borrando
+    currentText.value = fullText.substring(0, currentText.value.length - 1);
+  } else {
+    // Escribiendo
+    currentText.value = fullText.substring(0, currentText.value.length + 1);
+  }
+
+  // Cambiar entre escribir y borrar
+  if (!isDeleting.value && currentText.value === fullText) {
+    // Pausa después de escribir
+    setTimeout(() => (isDeleting.value = true), pauseBetweenTexts);
+  } else if (isDeleting.value && currentText.value === "") {
+    // Cambiar al siguiente texto
+    isDeleting.value = false;
+    currentIndex.value = (currentIndex.value + 1) % texts.length; // Reiniciar el índice
+  }
+
+  // Velocidad de animación
+  const speed = isDeleting.value ? deletingSpeed : typingSpeed;
+  setTimeout(typeText, speed);
+};
+
+onMounted(() => {
+  typeText(); // Iniciar la animación al montar el componente
+});
 </script>
 
 <template>
   <Layout id="home">
-    <Particles :showParticles="true" />
     <div class="flex h-screen items-center justify-center">
-      <div class="flex flex-col mx-auto items-center justify-center -sm:mt-10">
+      <div
+        class="flex flex-col mx-auto items-center justify-center -sm:mt-10 slide-in-left"
+      >
         <h1
           class="bg-clip-text font-semibold color-changing-title mt-20 mb-4 text-center text-transparent text-8xl leading-22 w-4/4 -md:w-full -md:text-6xl"
         >
           {{ _welcome.title }}
         </h1>
-        <div class="card">
+        <div class="card slide-in-left">
           <div class="loader">
-            <p class="dev">Full Stack</p>
+            <p class="dev">Desarrollador</p>
             <div class="words">
-              <span class="word">Developer</span>
+              <span class="word">{{ currentText }}</span>
             </div>
           </div>
         </div>
@@ -50,7 +90,7 @@ useHead({
 
           <button class="bookmarkBtn">
             <a
-              href="https://drive.google.com/file/d/1cmzq-X3vkXXyHZ48UGWxmjKfzewyHcQf/view"
+              href="https://drive.google.com/file/d/1f5dE7OkS7BfCeLr040UojrX6YzSnJ3jN/view?usp=drive_link"
               target="_blank"
               class="IconContainer"
             >
@@ -71,10 +111,7 @@ useHead({
           </button>
         </div>
         <button class="BtmProyects" data-text="Awesome">
-          <a
-            :href="`#${_header.link_2}`"
-            class="no-underline"
-          >
+          <a :href="`#${_header.link_2}`" class="no-underline">
             <span class="actual-text">&nbsp;Proyectos&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
               >&nbsp;Proyectos&nbsp;</span
@@ -85,3 +122,4 @@ useHead({
     </div>
   </Layout>
 </template>
+

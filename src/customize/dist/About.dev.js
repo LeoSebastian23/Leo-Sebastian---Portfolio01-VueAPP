@@ -40,17 +40,11 @@ var _about = {
     name: "ReactJS",
     icon: "/icons/reactjs.png"
   }, {
-    name: "React Native",
-    icon: "/icons/reactjs.png"
-  }, {
     name: "NodeJS",
-    icon: "/icons/nodejs.png"
+    icon: "/icons/nodejs.svg"
   }, {
     name: "VueJS",
     icon: "/icons/vuejs.png"
-  }, {
-    name: "Angular",
-    icon: "/icons/angular.png"
   }, {
     name: "TypeScript",
     icon: "/icons/typescript.png"
@@ -72,6 +66,15 @@ var _about = {
   }, {
     name: "Postman",
     icon: "/icons/postman.png"
+  }, {
+    name: "NextJS",
+    icon: "/icons/next.svg"
+  }, {
+    name: "Express",
+    icon: "/icons/express.svg"
+  }, {
+    name: "TAILWIND",
+    icon: "/icons/TAILWINDCSS.svg"
   }],
   education: [{
     name: "Tecnicatura Superior en Análisis, Programación y Desarrollo de Aplicaciones",

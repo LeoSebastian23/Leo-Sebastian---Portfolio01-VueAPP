@@ -20,10 +20,12 @@ import "./assets/about.css";
 import "./assets/contact.css";
 import "./assets/services.css";
 
+
 // Crea la aplicación y añade el encabezado y partículas.
 const app = createApp(App);
 const head = createHead();
 
 app.use(head); // Añade soporte de metadatos.
+
 app.mount("#app"); // Monta la aplicación en el elemento con id "app".
 

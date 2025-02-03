@@ -10,7 +10,6 @@ const openLink = (url) => {
 </script>
 
 <style>
-
 .grid {
   display: grid;
   gap: 2.5rem; /* Espaciado entre las tarjetas */
@@ -26,18 +25,21 @@ const openLink = (url) => {
 <template>
   <Layout id="services" class="py-20 -sm:py-10">
     <!-- Título centrado -->
-    <div class="flex justify-center items-center mt-3 bg-neutral-700 rounded-lg">
+    <div
+      class="flex justify-center items-center mt-3 rounded-lg"
+    >
       <i class="bi bi-folder custom-size"></i>
       <h1 class="text-center title text-zinc-200 not-italic ml-2">
         {{ _services.title }}
       </h1>
     </div>
-
     <!-- Grid de proyectos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-6">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-10 px-6 max-w-full mx-auto"
+    >
       <template v-for="(service, index) in _services.services" :key="index">
         <div
-          class="bg-slate-800 rounded-xl overflow-hidden transform transition-all hover:scale-102 hover:shadow-2xl hover:shadow-teal-700/50"
+          class="bg-slate-800 rounded-xl overflow-hidden transform transition-all hover:scale-101 hover:shadow-lg hover:shadow-teal-700/50"
         >
           <!-- Imagen del proyecto -->
           <div
@@ -45,11 +47,13 @@ const openLink = (url) => {
             :style="{ backgroundImage: `url(${service.img})` }"
           >
             <!-- Overlay para el título y botones -->
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
-              <h3 class="text-2xl font-bold text-white">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-end hover:bg-opacity-50"
+            >
+              <h3 class="text-2xl font-bold text-center text-white">
                 {{ service.title }}
               </h3>
-              <div class="flex space-x-2 mt-2">
+              <div class="flex space-x-2 mt-2 justify-center">
                 <button
                   v-if="service.linkGH"
                   class="btnLinks hover:text-teal-400 transition-colors"
@@ -76,10 +80,29 @@ const openLink = (url) => {
           </div>
 
           <!-- Contenido del cuerpo -->
-          <div class="p-6">
-            <p class="text-gray-300 text-sm text-left leading-relaxed">
-              {{ service.description }}
+          <div class="p-2">
+            <h3 class="text-center text-teal-400 m-2">
+              {{ service.type }}
+            </h3>
+
+            <p
+              class="mt-auto m-2 px-2 font-normal justify-center flex text-md group text-slate-100"
+            >
+              <span v-for="(tool, index) in service.tools" :key="index">
+                <span class="bg-slate-600 px-2 mx-1 rounded-full -sm:px-1 -sm:mt-2 hidden sm:flex">{{
+                  tool
+                }}</span>
+                <span v-if="index < service.tools.length - 1"></span>
+              </span>
             </p>
+
+            <ul
+              class="list-disc text-gray-300 text-sm text-left leading-relaxed pl-5"
+            >
+              <li v-for="(point, index) in service.description" :key="index">
+                {{ point }}
+              </li>
+            </ul>
           </div>
         </div>
       </template>
@@ -100,11 +123,13 @@ export default {
 <style scoped>
 /* Estilos personalizados */
 .btnLinks {
+  font-size: x-large;
   color: white;
-  background: none;
+  background: rgb(23, 20, 20);
   border: none;
   cursor: pointer;
   transition: color 0.3s ease;
+  margin: 2px;
 }
 
 .btnLinks:hover {

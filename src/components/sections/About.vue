@@ -129,16 +129,10 @@ const getIcon = (skillName) => {
       <div class="space-y-6">
         <template v-for="(education, index) in __about.education" :key="index">
           <div class="p-4 bg-neutral-700 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold">{{ education.name }}</h3>
-            <p>{{ education.institute }} - {{ education.date }}</p>
+            <h3 class="text-lg font-bold">{{ education.name }}</h3>
+            <p class="text-lg italic">{{ education.institute }}</p>
+            <p class="text-lg font-bold">{{ education.date }} </p>
             <p>{{ education.description_1 }}</p>
-            <a
-              :href="education.link"
-              target="_blank"
-              class="text-mountain-meadow underline hover:text-orange-300"
-            >
-              Ver más
-            </a>
           </div>
         </template>
       </div>

@@ -20,10 +20,15 @@ import "./assets/about.css";
 import "./assets/contact.css";
 import "./assets/services.css";
 
+/*--------Idiomas----------*/
+// Importa los idiomas a utilizar.
+import i18n from './i18n';
+
 // Crea la aplicación y añade el encabezado y partículas.
 const app = createApp(App);
 const head = createHead();
 
 app.use(head); // Añade soporte de metadatos.
+app.use(i18n);
 app.mount("#app"); // Monta la aplicación en el elemento con id "app".
 

@@ -20,8 +20,6 @@ require("./assets/contact.css");
 
 require("./assets/services.css");
 
-var _i18n = _interopRequireDefault(require("./i18n"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /*--------Create APP----------*/
@@ -35,13 +33,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 /*--------Estilos CSS----------*/
 // Importa los estilos CSS personalizados.
-
-/*--------Idiomas----------*/
-// Importa los idiomas a utilizar.
 // Crea la aplicación y añade el encabezado y partículas.
 var app = (0, _vue.createApp)(_App["default"]);
 var head = (0, _head.createHead)();
 app.use(head); // Añade soporte de metadatos.
 
-app.use(_i18n["default"]);
 app.mount("#app"); // Monta la aplicación en el elemento con id "app".

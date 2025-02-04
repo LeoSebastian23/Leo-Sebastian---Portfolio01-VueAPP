@@ -15,43 +15,41 @@ useHead({
   ],
 });
 
-
 const texts = ["Full Stack", "Software", "Web"];
 const currentText = ref("");
 const currentIndex = ref(0);
 const isDeleting = ref(false);
-const typingSpeed = 150; // Velocidad de escritura
-const deletingSpeed = 100; // Velocidad de borrado
-const pauseBetweenTexts = 2000; // Pausa entre textos
+const typingSpeed = 200;
+const deletingSpeed = 100;
+const pauseBetweenTexts = 2000;
 
 const typeText = () => {
   const fullText = texts[currentIndex.value];
 
   if (isDeleting.value) {
-    // Borrando
     currentText.value = fullText.substring(0, currentText.value.length - 1);
   } else {
-    // Escribiendo
     currentText.value = fullText.substring(0, currentText.value.length + 1);
   }
 
-  // Cambiar entre escribir y borrar
+  let speed = isDeleting.value ? deletingSpeed : typingSpeed;
+
   if (!isDeleting.value && currentText.value === fullText) {
-    // Pausa después de escribir
-    setTimeout(() => (isDeleting.value = true), pauseBetweenTexts);
+    setTimeout(() => {
+      isDeleting.value = true;
+      typeText(); // Llamar la función inmediatamente después de la pausa
+    }, pauseBetweenTexts);
+    return;
   } else if (isDeleting.value && currentText.value === "") {
-    // Cambiar al siguiente texto
     isDeleting.value = false;
-    currentIndex.value = (currentIndex.value + 1) % texts.length; // Reiniciar el índice
+    currentIndex.value = (currentIndex.value + 1) % texts.length;
   }
 
-  // Velocidad de animación
-  const speed = isDeleting.value ? deletingSpeed : typingSpeed;
   setTimeout(typeText, speed);
 };
 
 onMounted(() => {
-  typeText(); // Iniciar la animación al montar el componente
+  typeText();
 });
 </script>
 
@@ -66,7 +64,8 @@ onMounted(() => {
         >
           {{ _welcome.title }}
         </h1>
-        <div class="card slide-in-left">
+
+        <div class="card">
           <div class="loader">
             <p class="dev">Desarrollador</p>
             <div class="words">
@@ -74,6 +73,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
+
         <div
           class="w-1/2 flex justify-around items-center h-48 -lg:flex-col -lg:justify-around"
         >
